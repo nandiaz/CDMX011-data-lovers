@@ -1,0 +1,41 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: white;
+}
+
+header {
+    height: 500px;
+    width: 100%;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: 200px;
+    width: 300px;
+}
+
+.links {
+    display: flex;
+    align-content: flex-end;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.data {
+    height: 400px;
+    width: 34%;
+}
+
+.poster {
+    height: 400px;
+    width: 34%;
+}
