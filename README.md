@@ -46,7 +46,13 @@ Para informarse de todo lo que nos ha proporcionado el Estudio Ghibli, curiosida
 
 ## 6. Historias de usuario.
 
- 1. Historia de usuario 1:
+ 1. Historia de usuario 1: Filtrar las peliculas    
+    Como: usuario online
+    Quiero: Filtrar las peliculas, así como también sus personajes, locaciones y vehículos de cada films
+    Para:  Saber datos importantes sobre las peliculas de Studio Ghibli.
+* Criterios de aceptación:
+    *El usuario debe seleccionar de la lista desplegable la pelicula que desea conocer datos.
+    *La interfaz debe verse bien en distintos dispositivos.
  2. Historia de usuario 2:
  3. Historia de usuario 3: 
 
