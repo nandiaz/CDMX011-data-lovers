@@ -11,23 +11,39 @@
     <div id="root"></div>
 
     <header class="header"><img class="logo" src="img/logo simple.png" alt="">
-        <div class="list">
-            <select name="films" id="films" aria-placeholder="Films">
-        <option value="value1">Films 1</option>
-        <option value="value1">Films 1</option>
-        </select>
-            <button class="button">Buscar</button>
-        </div>
-        <!-- <div class="links">
-            <a href="./">Historia</a>
-            <a href="./">Enlaces</a>
-        </div> -->
+
     </header>
-    <section class="container">
-        <div class="data">Lista de datos</div>
-        <div class="poster">Poster</div>
-        <div class="characters">Personajes</div>
+    <section class="filter">
+        <div>
+            <label for="films">Order Films</label>
+            <select name="orderFilms" id="orderFilms">
+                <option value="upward">Upward (A-Z)</option>
+                <option value="falling">Falling (Z-A)</option>
+            </select>
+            <label for="date">Release Date</label>
+            <select name="orderDate" id="orderDate">
+                <option value="upwarddate">Upward</option>
+                <option value="fallingdate">Falling</option>
+            </select>
+            <label for="producer">Producer</label>
+            <select name="orderProducer" id="orderProducer">
+                <option value="upwardproducer">Upward (A-Z)</option>
+                <option value="fallingproducer">Falling (Z-A)</option>
+            </select>
+            <label for="score">Score</label>
+            <select name="orderscore" id="orderscore" aria-placeholder="Score">
+                <option value="upwardscore">Upward (A-Z)</option>
+                <option value="fallingscore">Falling (Z-A)</option>
+            </select>
+            <button class="button" id="filter">Filter</button>
+        </div>
     </section>
+    <section class="container">
+        <div id="gridMovies" class="gridMovies"></div>
+    </section>
+    <footer>
+        <p><img class="imgfooter" src="img/copyright.jpg">Copyright - Todos los derechos reservados - Creado por: Ana Karina Dávila - Nancy Díaz </p>
+    </footer>
 
     <script src="main.js" type="module"></script>
 </body>
