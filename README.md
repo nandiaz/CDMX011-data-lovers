@@ -78,5 +78,7 @@ Segunda Iteración.<br>
 <img class= "imgreadme" src="src/img/Prototipe3v2.jpeg"><br>
 ## 9. Prototipo de alta fidelidad
 Opciones:<br>
-<img src= "src/img/protototypesV2.png>
-
+<img src="src/img/amboslados prototypev2.png"><br>
+<img class= "imgreadme" src="src/img/prototype 1version2.png"><br>
+<img class= "imgreadme" src="src/img/prototype 2version2.png"><br>
+<img class= "imgreadme" src="src/img/prototype3version2.png"><br>
