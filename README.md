@@ -51,8 +51,12 @@ Para informarse de todo lo que nos ha proporcionado el Estudio Ghibli, curiosida
     Quiero: Filtrar las peliculas, así como también sus personajes, locaciones y vehículos de cada films
     Para:  Saber datos importantes sobre las peliculas de Studio Ghibli.
 * Criterios de aceptación:
-    *El usuario debe seleccionar de la lista desplegable la pelicula que desea conocer datos.
-    *La interfaz debe verse bien en distintos dispositivos.
+  1. El usuario debe seleccionar  el poster de la pelicula que desea conocer datos.
+  2. La interfaz debe verse bien en distintos dispositivos.
+* Definicion de terminado:
+  1. Pasar todas las pruebas.
+  2. Debe estar actualizada en el repositorio.
+
  2. Historia de usuario 2:
  3. Historia de usuario 3: 
 
@@ -67,10 +71,12 @@ Para informarse de todo lo que nos ha proporcionado el Estudio Ghibli, curiosida
 
 Sketches.
 Primera Iteración.<br>
-1. Opción 1:<br>
-<img src= "src/img/prototype1.jpeg"><br>
-2. Opcion 2:<br>
-<img src= "src/img/prototype2.jpeg"><br>
-
+1. Opciones:<br>
+<img src= "imgreadme" src="src/img/prototipe1v1.jpeg">
+<img class= "imgreadme" src="src/img/prototipe2v1.jpeg"><br>
+Segunda Iteración.<br>
+<img class= "imgreadme" src="src/img/Prototipe3v2.jpeg"><br>
 ## 9. Prototipo de alta fidelidad
+Opciones:<br>
+<img src= "imgreadme" src="src/img/protototypesV2.png">
 

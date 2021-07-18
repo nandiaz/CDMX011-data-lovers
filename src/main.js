@@ -15,5 +15,6 @@ const start = async() => {
     data.films.forEach((items) => output += templatePoster(items)); //forEach recorre los elementos del arreglo films.
     div.innerHTML = output;
     gridMovies.appendChild(div); //el metodo appendChild inserta un nuevo nodo dentro de la estructura DOM.
+
 };
 start();

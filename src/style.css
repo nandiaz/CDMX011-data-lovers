@@ -42,6 +42,11 @@ header {
     padding: 10px;
 }
 
+.imgreadme {
+    width: 200px;
+    height: 285px;
+}
+
 @media only screen and (max-width: 400px) {
     .footer {
         align-items: flex-start;
