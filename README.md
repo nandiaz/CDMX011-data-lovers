@@ -72,11 +72,11 @@ Para informarse de todo lo que nos ha proporcionado el Estudio Ghibli, curiosida
 Sketches.
 Primera Iteración.<br>
 1. Opciones:<br>
-<img src= "imgreadme" src="src/img/prototipe1v1.jpeg">
+<img class= "imgreadme" src="src/img/prototipe1v1.jpeg">
 <img class= "imgreadme" src="src/img/prototipe2v1.jpeg"><br>
 Segunda Iteración.<br>
 <img class= "imgreadme" src="src/img/Prototipe3v2.jpeg"><br>
 ## 9. Prototipo de alta fidelidad
 Opciones:<br>
-<img src= "imgreadme" src="src/img/protototypesV2.png">
+<img class= "imgreadme" src= "src/img/protototypesV2.png>
 
