@@ -17,23 +17,18 @@
         <div>
             <label for="films">Order Films</label>
             <select name="orderFilms" id="orderFilms">
-                <option value="upward">Upward (A-Z)</option>
-                <option value="falling">Falling (Z-A)</option>
+                <option value="upward" id="orderUpward">Upward (A-Z)</option>
+                <option value="falling" id="orderFalling">Falling (Z-A)</option>
             </select>
             <label for="date">Release Date</label>
-            <select name="orderDate" id="orderDate">
-                <option value="upwarddate">Upward</option>
-                <option value="fallingdate">Falling</option>
+            <select name="orderDate" id="orderDate"></select>
             </select>
             <label for="producer">Producer</label>
-            <select name="orderProducer" id="orderProducer">
-                <option value="nameproducer">Name Producer</option>
-                
-            </select>
+            <select name="selectProducer" id="selectProducer"></select>
             <label for="score">Score</label>
             <select name="orderscore" id="orderscore" aria-placeholder="Score">
-                <option value="upwardscore">Upward</option>
-                <option value="fallingscore">Falling</option>
+                <option value="upward" id="scoreUpward">Upward</option>
+                <option value="falling" id="scoreFalling">Falling</option>
             </select>
             <button class="button" id="reset">Reset</button>
         </div>
