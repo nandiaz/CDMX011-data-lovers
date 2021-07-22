@@ -1,42 +1,77 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: white;
+    background-image: url(img/paper-1074131_1920.jpg);
 }
 
 header {
-    height: 180px;
+    height: 400px;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.logo {
-    height: 200px;
-    width: 300px;
+.banner {
+    height: 400px;
+    width: 3000px;
+}
+
+select {
+    background: #5D534A;
+    font-size: 18px;
+    font-family: 'Muli', 'sans-serif';
+    color: #E6DDC6;
+    font-weight: bold;
+    border-color: blanchedalmond;
+    margin-right: 15px;
+    width: 180px;
 }
 
 .container {
+    width: 100%;
+}
+
+.gridMovies {
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 80%;
+    padding-left: 12%;
+    padding-right: 15%;
 }
 
 .filter {
     display: flex;
+    justify-content: center;
     width: 100%;
-    padding: 15px;
+    padding: 20px;
+    font-size: 25px;
+    font-family: 'Muli', 'sans-serif';
 }
 
-.gridMovies {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.button {
+    background-color: #5D534A;
+    border: none;
+    border-radius: 8px;
+    color: #E6DDC6;
+    width: 90px;
+    font-size: 20px;
+    font-family: 'Muli', 'sans-serif';
+    font-weight: bold;
+    margin-left: 20px;
 }
 
 .imgfilm {
-    margin: 25px;
-    box-shadow: 5px 5px 5px 2px #595260, 8px 8px 8px 5px #2C2E43;
-    width: 230px;
-    height: 380px;
+    margin: 50px;
+    box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
+    width: 330px;
+    height: 480px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
 }
 
 .imgfooter {
