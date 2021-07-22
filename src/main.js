@@ -35,25 +35,28 @@ const start = async() => {
         let listByProducer = '';
         filterProducer.forEach((item) => listByProducer += templatePoster(item));
         div.innerHTML = listByProducer;
-        gridMovies.appendChild(div)
+
+
     })
 
     select.addEventListener('change', () => {
         let optionReleaseDate = select.value;
-        if (select.value == 'upward') {
-            let orderByReleaseData = manager.orderByYearsAscending();
-            console.log("años ascendentes", orderByReleaseData);
-            let listByReleaseData = '';
-            orderByReleaseData.forEach((item) => listByReleaseData += templatePoster(item));
-            div.innerHTML = listByReleaseData;
-            gridMovies.appendChild(div);
-        } else if (select.value == 'falling') {
-            let orderByReleaseData = manager.orderByYearsDescending();
-            let listByReleaseData = '';
-            orderByReleaseData.forEach((item) => listByReleaseData += templatePoster(item));
-            div.innerHTML = listByReleaseData;
-            gridMovies.appendChild(div);
+        let orderByReleaseData = manager.sortDataYear();
+        const optionsSelect = () => {
+            if (optionReleaseDate == 'upward') {
+                console.log("años ascendentes", orderByReleaseData);
+                let listByReleaseData = '';
+                orderByReleaseData.forEach((item) => listByReleaseData += templatePoster(item));
+                div.innerHTML = listByReleaseData;
+            } else {
+                optionReleaseDate == 'falling';
+                orderByReleaseData.reverse();
+                let listByReleaseData = '';
+                orderByReleaseData.forEach((item) => listByReleaseData += templatePoster(item));
+                div.innerHTML = listByReleaseData;
+            }
         }
-    })
+    });
 }
+
 start();

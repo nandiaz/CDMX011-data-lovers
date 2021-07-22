@@ -32,33 +32,49 @@ export function DataManager() {
         }
         //Metodo filtrar por productor.
     this.filterByProducer = (producer) => {
-            console.log('sirve por fa ', this.films);
-            if (!this.films) return []; //no se ha ejecutado el metodo load, no hay films para cargar.
-            return this.films.filter((item) => {
-                console.log("comparamos", `${item.producer} == ${producer}`)
-                return item.producer == producer
-            });
-        }
-        //Metodo ordenar ascendentes los films por release_date.
-    this.orderByYearsAscending = () => {
-            let yearsAscending = this.years.sort(function(a, b) {
-                return a - b;
-            })
-            return yearsAscending;
-        }
-        //Metodo ordenar descendente los films por release_date.
-    this.orderByYearsDescending = () => {
-        let yearsDescendant = this.years.reverse();
-        return yearsDescendant;
+        console.log('sirve por fa ', this.films);
+        if (!this.films) return []; //no se ha ejecutado el metodo load, no hay films para cargar.
+        return this.films.filter((item) => {
+            console.log("comparamos", `${item.producer} == ${producer}`)
+            return item.producer == producer
+        });
     }
+
+    //metodo para ordenar con sort
+    this.sortDataYear = () => {
+        this.years.sort((a, b) => {
+            if (parseInt(a) == parseInt(b)) {
+                return 0;
+            }
+            if (a < b) {
+                return -1;
+            }
+            return 1;
+        })
+
+    }
+
+    //Metodo ordenar ascendentes los films por release_date.
+    // this.orderByYearsAscending = () => {
+    //         let yearsAscending = this.years.sort(function(a, b) {
+    //             return a - b;
+    //         })
+    //         return yearsAscending;
+    //     }
+    //     //Metodo ordenar descendente los films por release_date.
+    // this.orderByYearsDescending = () => {
+    //     let yearsDescendant = this.years.reverse();
+    //     return yearsDescendant;
+    // }
 
 
 
 }
 
 
-
-//recibiría la data, y nos retornaría aquellos datos que sí cumplan con la condición.
+//El primer parámetro, data, nos entrega los datos. 
+//El segundo parámetro, sortBy, nos dice con respecto a cuál de los campos de la data se quiere ordenar.
+// El tercer parámetro, sortOrder, indica si se quiere ordenar de manera ascendente o descendente.
 //     //   
 // const sortData = (data, sortBy, sortOrder) => {
 //     }
