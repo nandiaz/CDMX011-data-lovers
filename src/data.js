@@ -82,7 +82,7 @@ export function DataManager() {
 
 
 
-}
+    });
 
 // users.sort(function(a, b){
 //     if(a.firstname < b.firstname) { return -1; }
