@@ -20,6 +20,9 @@ export function DataManager() {
             this.producer = films.map((item) => item.producer).filter((item) => ![undefined].includes(item));
             this.producer = [...new Set(this.producer)];
             console.log('los productores', this.producer);
+            this.title = films.map((item) => item.title).filter((item) => ![undefined].includes(item));
+            this.title = [...new Set(this.title)];
+            console.log('los titulos', this.title);
         }
         //Metodo para cargar la data.
     this.load = async() => { //funcion es asincrona
@@ -55,18 +58,18 @@ export function DataManager() {
             if (option === 'falling') return isUp ? -1 : 1;
         });
     };
-    this.sortDataFilms = (option) => {
+    this.sortDataTitle = (option) => {
         let checkIsUp = (a, b) => a > b;
         let types = ['upward', 'falling'];
         if (!types.includes(option)) return new Error('El tipo no existe');
+
         return this.films.sort((filmA, filmB) => {
-            // comparamos los anios de las peliculas, no las peliculas
+            // comparamos los titulos de las peliculas, no las peliculas
             if (filmA.title === filmB.title) return 0;
-            /**
-             * La funcion checkIsUp  comparando anios, asi que tenemos es que pasar los anios.
-             */
+            //  checkIsUp  compara anios, asi que tenemos es que pasar los anios.
+
             let isUp = checkIsUp(filmA.title, filmB.title);
-            if (option === 'upward') return isUp ? 1 : -1; //operadores ternarios 
+            if (option === 'upward') return isUp ? 1 : -1; //operadores ternarios el ?  equivale al if y los : al else 
             if (option === 'falling') return isUp ? -1 : 1;
         });
     };

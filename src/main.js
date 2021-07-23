@@ -1,8 +1,9 @@
 import { DataManager, } from './data.js';
 let manager = new DataManager; /// se instancia todo lo que esta adentro del DataManager, todos los this, aqui podre verlos.
 console.log('la clase', manager);
-console.log('que trae producer', manager.filterByProducer('Hayao Miyazaki'))
-console.log('que trae años', manager.filterByProducer(1988))
+console.log('que trae producer', manager.filterByProducer('Hayao Miyazaki'));
+console.log('que trae años', manager.filterByProducer(1988));
+console.log('que tare films', manager.sortDataFilms);
 const templatePoster = (manager) => {
     return `<picture>
     <img src= "${manager.poster}" alt= "${manager.title}" class= "imgfilm">
@@ -52,13 +53,15 @@ const start = async() => {
 
     const orderFilms = document.querySelector('#orderFilms');
     orderFilms.addEventListener('change', (event) => {
-        let optionorderFilms = orderFilms.value;
-        let data = manager.sortData(optionorderFilms);
+        let optionOrderFilms = orderFilms.value;
+        console.log('optionfilms', optionOrderFilms);
+        let data = manager.sortDataTitle(optionOrderFilms);
         console.log('data', data);
         let listByOrderFilms = '';
         console.log('soy listByOrderFilms', listByOrderFilms)
         data.forEach((item) => listByOrderFilms += templatePoster(item));
         div.innerHTML = listByOrderFilms;
+        console.log('soy listByOrderFilms', listByOrderFilms)
 
     });
 
