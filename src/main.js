@@ -25,7 +25,7 @@ const start = async() => {
     div.innerHTML = outputPoster;
     gridMovies.appendChild(div); //el metodo appendChild inserta un nuevo nodo dentro de la estructura DOM.
     //Llenando los select
-    const select = document.querySelector('#orderDate');
+
     const selectProducer = document.querySelector('#selectProducer');
     // manager.years.forEach(item => select.add(createOpcion(item, item)));
     manager.producer.forEach(item => selectProducer.add(createOpcion(item, item)));
@@ -35,28 +35,34 @@ const start = async() => {
         let listByProducer = '';
         filterProducer.forEach((item) => listByProducer += templatePoster(item));
         div.innerHTML = listByProducer;
-
-
     })
 
-    select.addEventListener('change', () => {
+
+    const select = document.querySelector('#orderDate');
+    select.addEventListener('change', (event) => {
         let optionReleaseDate = select.value;
-        let orderByReleaseData = manager.sortDataYear();
-        const optionsSelect = () => {
-            if (optionReleaseDate == 'upward') {
-                console.log("años ascendentes", orderByReleaseData);
-                let listByReleaseData = '';
-                orderByReleaseData.forEach((item) => listByReleaseData += templatePoster(item));
-                div.innerHTML = listByReleaseData;
-            } else {
-                optionReleaseDate == 'falling';
-                orderByReleaseData.reverse();
-                let listByReleaseData = '';
-                orderByReleaseData.forEach((item) => listByReleaseData += templatePoster(item));
-                div.innerHTML = listByReleaseData;
-            }
-        }
+        let data = manager.sortData(optionReleaseDate);
+        console.log('data', data);
+        let listByReleaseData = '';
+        console.log('soy listByReleaseData', listByReleaseData)
+        data.forEach((item) => listByReleaseData += templatePoster(item));
+        div.innerHTML = listByReleaseData;
+
     });
+
+    const orderFilms = document.querySelector('#orderFilms');
+    orderFilms.addEventListener('change', (event) => {
+        let optionorderFilms = orderFilms.value;
+        let data = manager.sortData(optionorderFilms);
+        console.log('data', data);
+        let listByOrderFilms = '';
+        console.log('soy listByOrderFilms', listByOrderFilms)
+        data.forEach((item) => listByOrderFilms += templatePoster(item));
+        div.innerHTML = listByOrderFilms;
+
+    });
+
 }
+
 
 start();

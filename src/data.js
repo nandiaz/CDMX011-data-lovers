@@ -32,51 +32,43 @@ export function DataManager() {
         }
         //Metodo filtrar por productor.
     this.filterByProducer = (producer) => {
-        console.log('sirve por fa ', this.films);
-        if (!this.films) return []; //no se ha ejecutado el metodo load, no hay films para cargar.
-        return this.films.filter((item) => {
-            console.log("comparamos", `${item.producer} == ${producer}`)
-            return item.producer == producer
+            console.log('sirve por fa ', this.films);
+            if (!this.films) return []; //no se ha ejecutado el metodo load, no hay films para cargar.
+            return this.films.filter((item) => {
+                console.log("comparamos", `${item.producer} == ${producer}`)
+                return item.producer == producer
+            });
+        }
+        //metodo para ordenar con sort
+    this.sortData = (option) => {
+        let checkIsUp = (a, b) => a > b;
+        let types = ['upward', 'falling'];
+        if (!types.includes(option)) return new Error('El tipo no existe');
+
+        return this.films.sort((filmA, filmB) => {
+            // comparamos los anios de las peliculas, no las peliculas
+            if (filmA.release_date === filmB.release_date) return 0;
+            //  checkIsUp  compara anios, asi que tenemos es que pasar los anios.
+
+            let isUp = checkIsUp(filmA.release_date, filmB.release_date);
+            if (option === 'upward') return isUp ? 1 : -1; //operadores ternarios el ?  equivale al if y los : al else 
+            if (option === 'falling') return isUp ? -1 : 1;
         });
-    }
-
-    //metodo para ordenar con sort
-    this.sortDataYear = () => {
-        this.years.sort((a, b) => {
-            if (parseInt(a) == parseInt(b)) {
-                return 0;
-            }
-            if (a < b) {
-                return -1;
-            }
-            return 1;
-        })
-
-    }
-
-    //Metodo ordenar ascendentes los films por release_date.
-    // this.orderByYearsAscending = () => {
-    //         let yearsAscending = this.years.sort(function(a, b) {
-    //             return a - b;
-    //         })
-    //         return yearsAscending;
-    //     }
-    //     //Metodo ordenar descendente los films por release_date.
-    // this.orderByYearsDescending = () => {
-    //     let yearsDescendant = this.years.reverse();
-    //     return yearsDescendant;
-    // }
-
-
+    };
+    this.sortDataFilms = (option) => {
+        let checkIsUp = (a, b) => a > b;
+        let types = ['upward', 'falling'];
+        if (!types.includes(option)) return new Error('El tipo no existe');
+        return this.films.sort((filmA, filmB) => {
+            // comparamos los anios de las peliculas, no las peliculas
+            if (filmA.title === filmB.title) return 0;
+            /**
+             * La funcion checkIsUp  comparando anios, asi que tenemos es que pasar los anios.
+             */
+            let isUp = checkIsUp(filmA.title, filmB.title);
+            if (option === 'upward') return isUp ? 1 : -1; //operadores ternarios 
+            if (option === 'falling') return isUp ? -1 : 1;
+        });
+    };
 
 }
-
-
-//El primer parámetro, data, nos entrega los datos. 
-//El segundo parámetro, sortBy, nos dice con respecto a cuál de los campos de la data se quiere ordenar.
-// El tercer parámetro, sortOrder, indica si se quiere ordenar de manera ascendente o descendente.
-//     //   
-// const sortData = (data, sortBy, sortOrder) => {
-//     }
-//     //permitirá hacer cálculos estadísticos básicos para ser mostrados de acuerdo a la data proporcionada.
-// const computeStats = (data) => {
