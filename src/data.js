@@ -2,7 +2,6 @@
 // - studio::: propiedad de tipo string
 // - films: propiedad de tipo Array donde cada item es un objeto en si mismo
 // - films[0] objetos de tipo string exceptuando peaople, locations y vehicles"  que son arreglos.
-
 //Objeto Data con un metodo Get
 //La ventaja de los objetos es que como tienen identidad, pueden encargarse de mas cosas dentro de el mismo
 
@@ -66,8 +65,6 @@ export function DataManager() {
         return this.films.sort((filmA, filmB) => {
             // comparamos los titulos de las peliculas, no las peliculas
             if (filmA.title === filmB.title) return 0;
-            //  checkIsUp  compara anios, asi que tenemos es que pasar los anios.
-
             let isUp = checkIsUp(filmA.title, filmB.title);
             if (option === 'upward') return isUp ? 1 : -1; //operadores ternarios el ?  equivale al if y los : al else 
             if (option === 'falling') return isUp ? -1 : 1;

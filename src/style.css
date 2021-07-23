@@ -23,8 +23,13 @@ select {
     color: #E6DDC6;
     font-weight: bold;
     border-color: blanchedalmond;
-    margin-right: 15px;
-    width: 200px;
+    margin-right: 40px;
+    width: 210px;
+    text-align: center;
+}
+
+label {
+    margin-right: 20px;
 }
 
 .container {
@@ -42,8 +47,6 @@ select {
 .filter {
     display: flex;
     justify-content: center;
-    width: 100%;
-    padding: 20px;
     font-size: 25px;
     font-family: 'Muli', 'sans-serif';
 }

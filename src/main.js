@@ -6,7 +6,9 @@ console.log('que trae años', manager.filterByProducer(1988));
 console.log('que tare films', manager.sortDataFilms);
 const templatePoster = (manager) => {
     return `<picture>
+   
     <img src= "${manager.poster}" alt= "${manager.title}" class= "imgfilm">
+
     </picture>`;
 }
 const createOpcion = (value, text) => {
