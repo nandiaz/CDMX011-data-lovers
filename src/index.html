@@ -15,27 +15,30 @@
     </header>
     <section>
         <div class="filter">
-            <label for="films">Order Films</label>
-            <select name="orderFilms" id="orderFilms">
+            <form id="myForm">
+                <label for="films">Order Films</label>
+                <select name="orderFilms" id="orderFilms">
                 <option value="0">Order</option>
                 <option value="upward" id="orderUpward">Upward (A-Z)</option>
                 <option value="falling" id="orderFalling">Falling (Z-A)</option>
             </select>
-            <label for="date">Release Date</label>
-            <select name="orderDate" id="orderDate">
-                        <option value="0">Order</option>
-                <option value="upward" id="orderUpwardDate">Upward  	
-                    &#8593;</option>
+                <label for="date">Release Date</label>
+                <select name="orderDate" id="orderDate">
+                <option value="0">Order</option>
+                <option value="upward" id="orderUpwardDate">Upward &#8593;</option>
                 <option value="falling" id="orderFallingDate">Falling &#8595;</option>
             </select>
-            <label for="producer">Producer</label>
-            <select name="selectProducer" id="selectProducer"></select>
-            <!-- <label for="score">Score</label>
+                <label for="producer">Producer</label>
+                <select name="selectProducer" id="selectProducer">
+                    <option value="0">Filter</option>
+                </select>
+                <!-- <label for="score">Score</label>
             <select name="orderscore" id="orderscore" aria-placeholder="Score">
                 <option value="upward" id="scoreUpward">Upward</option>
                 <option value="falling" id="scoreFalling">Falling</option>
             </select> -->
-            <button class="button" id="reset">Reset</button>
+                <button class="button" id="reset" onclick="restore()">Reset</button>
+            </form>
         </div>
     </section>
     <section class="container">

@@ -12,25 +12,29 @@ const templatePoster = (manager) => {
     </picture>`;
 }
 const createOpcion = (value, text) => {
-    const option = document.createElement('option');
-    option.value = value;
-    option.text = text;
-    return option;
-}
+        const option = document.createElement('option');
+        option.value = value;
+        option.text = text;
+        return option;
+    }
+    //constantes del DOM
+const selectProducer = document.querySelector('#selectProducer');
+const gridMovies = document.querySelector('#gridMovies');
+const orderDate = document.querySelector('#orderDate');
+const orderFilms = document.querySelector('#orderFilms');
+const reset = document.querySelector('#reset')
 const start = async() => {
     await manager.load();
     console.log('el manager', manager);
     //Mostrando los poster
     let outputPoster = [];
-    const gridMovies = document.querySelector('#gridMovies');
+
     const div = document.createElement('div'); //createElement() crea un elemento HTML especificado por su tagName.
     manager.films.forEach((items) => outputPoster += templatePoster(items)); //forEach recorre los elementos del arreglo films.
     div.innerHTML = outputPoster;
     gridMovies.appendChild(div); //el metodo appendChild inserta un nuevo nodo dentro de la estructura DOM.
-    //Llenando los select
-
-    const selectProducer = document.querySelector('#selectProducer');
-    // manager.years.forEach(item => select.add(createOpcion(item, item)));
+    //Llenando el select de producer 
+    // manager.years.forEach(item => orderDate.add(createOpcion(item, item)));
     manager.producer.forEach(item => selectProducer.add(createOpcion(item, item)));
     selectProducer.addEventListener('change', () => {
         let optionProducer = selectProducer.value;
@@ -39,21 +43,16 @@ const start = async() => {
         filterProducer.forEach((item) => listByProducer += templatePoster(item));
         div.innerHTML = listByProducer;
     })
-
-
-    const select = document.querySelector('#orderDate');
-    select.addEventListener('change', (event) => {
-        let optionReleaseDate = select.value;
+    orderDate.addEventListener('change', (event) => {
+        let optionReleaseDate = orderDate.value;
         let data = manager.sortData(optionReleaseDate);
         console.log('data', data);
         let listByReleaseData = '';
         console.log('soy listByReleaseData', listByReleaseData)
         data.forEach((item) => listByReleaseData += templatePoster(item));
         div.innerHTML = listByReleaseData;
-
+        console.log('soy listByReleaseData', listByReleaseData)
     });
-
-    const orderFilms = document.querySelector('#orderFilms');
     orderFilms.addEventListener('change', (event) => {
         let optionOrderFilms = orderFilms.value;
         console.log('optionfilms', optionOrderFilms);
@@ -64,8 +63,9 @@ const start = async() => {
         data.forEach((item) => listByOrderFilms += templatePoster(item));
         div.innerHTML = listByOrderFilms;
         console.log('soy listByOrderFilms', listByOrderFilms)
-
     });
+
+    const restore = () => document.getElementById('myForm').reset; //Restaurando los valores con el metodo HTMLFormElement.reset
 
 }
 
