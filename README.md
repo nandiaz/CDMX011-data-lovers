@@ -83,3 +83,5 @@ Opciones:<br>
 <img class= "imgreadme" src="src/img/prototype 1version2.png"><br>
 <img class= "imgreadme" src="src/img/prototype 2version2.png"><br>
 <img class= "imgreadme" src="src/img/prototype3version2.png"><br>
+
+## 10. Diseño final delproyecto:

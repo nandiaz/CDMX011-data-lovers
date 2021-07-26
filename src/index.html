@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<!<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -10,36 +10,45 @@
 <body>
     <div id="root"></div>
 
-    <header class="header"><img class="logo" src="img/logo simple.png" alt="">
+    <header class="header"><img class="banner" src="img/banner calidad optima.png" alt="bannertotoros">
 
     </header>
-    <section class="filter">
-        <div>
-            <label for="films">Order Films</label>
-            <select name="orderFilms" id="orderFilms">
+    <section>
+        <div class="filter">
+            <form id="myForm">
+                <label for="films">Order Films</label>
+                <select name="orderFilms" id="orderFilms">
+                <option value="0">Order</option>
                 <option value="upward" id="orderUpward">Upward (A-Z)</option>
                 <option value="falling" id="orderFalling">Falling (Z-A)</option>
             </select>
-            <label for="date">Release Date</label>
-            <select name="orderDate" id="orderDate"></select>
+                <label for="date">Release Date</label>
+                <select name="orderDate" id="orderDate">
+                <option value="0">Order</option>
+                <option value="upward" id="orderUpwardDate">Upward &#8593;</option>
+                <option value="falling" id="orderFallingDate">Falling &#8595;</option>
             </select>
-            <label for="producer">Producer</label>
-            <select name="selectProducer" id="selectProducer"></select>
-            <label for="score">Score</label>
+                <label for="producer">Producer</label>
+                <select name="selectProducer" id="selectProducer">
+                    <option value="0">Filter</option>
+                </select>
+                <!-- <label for="score">Score</label>
             <select name="orderscore" id="orderscore" aria-placeholder="Score">
                 <option value="upward" id="scoreUpward">Upward</option>
                 <option value="falling" id="scoreFalling">Falling</option>
-            </select>
-            <button class="button" id="reset">Reset</button>
+            </select> -->
+                <button class="button" id="reset" onclick="restore()">Reset</button>
+            </form>
         </div>
     </section>
     <section class="container">
         <div id="gridMovies" class="gridMovies"></div>
+
+        <output for="select"></output>
     </section>
-    <footer>
+    <footer class="footer">
         <p><img class="imgfooter" src="img/copyright-48.png">Copyright - Todos los derechos reservados - Creado por: Ana Karina Dávila - Nancy Díaz </p>
     </footer>
-
     <script src="main.js" type="module"></script>
 </body>
 
