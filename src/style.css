@@ -34,15 +34,68 @@ label {
 
 .container {
     width: 100%;
+    
 }
 
-.gridMovies {
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    padding-left: 12%;
-    padding-right: 15%;
+#gridMovies.gridMovies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    
+   
 }
+div{
+      display: grid;  
+      grid-template-columns: repeat(3, 1fr) ;
+            
+}
+
+
+
+
+.flip-card {
+    padding: 10px;
+    
+    perspective: 1000px;
+  }
+  
+  .flip-card-inner {
+    
+    position:  relative;
+    transition: 2.00s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+ 
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    margin: 50px;
+    width: 330px;
+    height: 480px;
+
+  }
+  
+  .flip-card-back {
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #2980b9;
+    color: white;
+    transform: rotateY(180deg);
+    width: 330px;
+    height: 480px;
+  }
 
 .filter {
     display: flex;
@@ -64,7 +117,6 @@ label {
 }
 
 .imgfilm {
-    margin: 50px;
     box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
     width: 330px;
     height: 480px;
@@ -94,3 +146,4 @@ label {
         flex-direction: column;
     }
 }
+
