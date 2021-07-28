@@ -17,10 +17,7 @@ body {
 .main-container {}
 
 header {
-    height: 90%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 .banner {
@@ -57,10 +54,10 @@ label {
 .films__container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    grid-gap: 40px;
 }
 
 .flip-card {
-    padding: 10px;
     perspective: 1000px;
 }
 
@@ -86,8 +83,8 @@ label {
 
 .flip-card-front {
     margin: 50px;
-    width: 200px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
 }
 
 .flip-card-back {
@@ -124,8 +121,8 @@ label {
 
 .imgfilm {
     box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
-    width: 100px;
-    height: 200px;
+    width: 100%;
+    height: 300px;
 }
 
 .footer {
