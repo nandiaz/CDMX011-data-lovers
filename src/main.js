@@ -33,7 +33,8 @@ const start = async() => {
         let listByProducer = '';
         filterProducer.forEach((item) => listByProducer += templatePoster(item));
         div.innerHTML = listByProducer;
-    }) const mySelects = (select) => {
+    });
+    const mySelects = (select) => {
         select.addEventListener('change', event => {
             let field = select.dataset.field;
             let option = select.value;
