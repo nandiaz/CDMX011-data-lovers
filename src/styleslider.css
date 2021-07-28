@@ -1,0 +1,38 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding: 0px;
+    background-image: url(img/paper-1074131_1920.jpg);
+    margin: auto;
+    max-width: 1280px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 100px;
+}
+
+.main-container {}
+
+header {
+    text-align: center;
+}
+
+.banner {
+    height: 250px;
+    width: 1000px;
+}
+
+filter {
+    background: #5D534A;
+    font-size: 18px;
+    font-family: 'Muli', 'sans-serif';
+    color: #E6DDC6;
+    font-weight: bold;
+    border-color: blanchedalmond;
+    margin-right: 40px;
+    width: 210px;
+    text-align: center;
+}
