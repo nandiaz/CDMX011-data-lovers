@@ -22,7 +22,7 @@ header {
 
 .banner {
     height: 250px;
-    width: 1000px;
+    width: 100;
 }
 
 select {
@@ -52,9 +52,11 @@ label {
 }
 
 .films__container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .flip-card {
