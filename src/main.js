@@ -58,53 +58,11 @@ const start = async() => {
         form.classList.toggle('form--showed'); //como 'form--showed' no existe lo añade y devuelve true 
     };
     btnFilter.addEventListener('click', toggleForm);
-<<<<<<< HEAD
     btnTimes.addEventListener('click', toggleForm );
     
    
 }
-=======
-    btnTimes.addEventListener('click', toggleForm);
-    
-    //pasar a la segunda pagina
-    function filterFilmsSecond(id) {
-
-
->>>>>>> 993d2c7 (probando 2a pagina)
 
 start();
 
-<<<<<<< HEAD
   
-=======
-}
-
-start();
-
-// function FilterFilmsSecond(id) {
-
-//     alert(id);
-    
-    
-//     localStorage.setItem("Films", film);
-  
-  
-//   var film = localStorage.getItem("Films")
-  
-  
-//   var container2 = document.getElementById("container2")
-  
-//   var span = document.createElement("span")
-//   var contenido =document.createTextNode("Hola, " + film )
-//   container2.appendChild(span)
-//   span.appendChild(contenido)
-<<<<<<< HEAD
-//   document.body.container2.appendChild(container2)
-// function myFunction(event){
-//     var x = event.detail;
-//     document.getElementById 
-// }
->>>>>>> 8b09f49 (segundo intento de la 2a pagina)
-=======
-//   document.body.container2.appendChild(container2)
->>>>>>> 993d2c7 (probando 2a pagina)
