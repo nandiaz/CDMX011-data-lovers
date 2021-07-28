@@ -1,25 +1,23 @@
 import { DataManager, } from './data.js';
 let manager = new DataManager; /// se instancia todo lo que esta adentro del DataManager, todos los this, aqui podre verlos.
 console.log('la clase', manager);
-console.log('que trae producer', manager.filterByProducer('Hayao Miyazaki'));
-console.log('que trae años', manager.filterByProducer(1988));
-console.log('que tare films', manager.sortDataFilms);
+
 const templatePoster = (manager) => {
     return `
-    <div class = "flip-card">
-      <div class = "flip-card-inner">
-        <div class = "flip-card front">
-          <picture>
-          <img src= "${manager.poster}" alt= "${manager.title}" class= "imgfilm">
-          </picture>
-        </div>
-        <div class = "flip-card-back">
-          <h1> ${manager.title} </h1>
-          <p> ${manager.description} </p>
-        </div>
+  <div class = "flip-card">
+    <div class = "flip-card-inner">
+      <div class = "flip-card front">
+        <picture>
+        <img src= "${manager.poster}" alt= "${manager.title}" class= "imgfilm">
+        </picture>
+      </div>
+      <div class = "flip-card-back">
+        <h1> ${manager.title} </h1>
+        <p> ${manager.description} </p>
       </div>
     </div>
-          `;
+  </div>
+        `;
 }
 const createOpcion = (value, text) => {
         const option = document.createElement('option');
@@ -30,15 +28,13 @@ const createOpcion = (value, text) => {
     //constantes del DOM
 const selectProducer = document.querySelector('#selectProducer');
 const gridMovies = document.querySelector('#gridMovies');
-const orderDate = document.querySelector('#orderDate');
-const orderFilms = document.querySelector('#orderFilms');
+//const orderDate = document.querySelector('#orderDate');
+//const orderFilms = document.querySelector('#orderFilms');
 const reset = document.querySelector('#reset')
 const start = async() => {
     await manager.load();
-    console.log('el manager', manager);
     //Mostrando los poster
     let outputPoster = [];
-
     const div = document.createElement('div'); //createElement() crea un elemento HTML especificado por su tagName.
     manager.films.forEach((items) => outputPoster += templatePoster(items)); //forEach recorre los elementos del arreglo films.
     div.innerHTML = outputPoster;
@@ -53,30 +49,20 @@ const start = async() => {
         filterProducer.forEach((item) => listByProducer += templatePoster(item));
         div.innerHTML = listByProducer;
     })
-    orderDate.addEventListener('change', (event) => {
-        let optionReleaseDate = orderDate.value;
-        let data = manager.sortData(optionReleaseDate);
-        console.log('data', data);
-        let listByReleaseData = '';
-        console.log('soy listByReleaseData', listByReleaseData)
-        data.forEach((item) => listByReleaseData += templatePoster(item));
-        div.innerHTML = listByReleaseData;
-        console.log('soy listByReleaseData', listByReleaseData)
-    });
-    orderFilms.addEventListener('change', (event) => {
-        let optionOrderFilms = orderFilms.value;
-        console.log('optionfilms', optionOrderFilms);
-        let data = manager.sortDataTitle(optionOrderFilms);
-        console.log('data', data);
-        let listByOrderFilms = '';
-        console.log('soy listByOrderFilms', listByOrderFilms)
-        data.forEach((item) => listByOrderFilms += templatePoster(item));
-        div.innerHTML = listByOrderFilms;
-        console.log('soy listByOrderFilms', listByOrderFilms)
-    });
+    const mySelects = (select) => {
+        select.addEventListener('change', event => {
+            let field = select.dataset.field;
+            let option = select.value;
+            let data = manager.sortData(option, field);
+            let listByOrder = '';
+            data.forEach((item) => listByOrder += templatePoster(item));
+            div.innerHTML = listByOrder;
+        })
+    }; // esto se ejecuta por cada select.
+    document.querySelectorAll(`[data-field]`).forEach(mySelects);
 
-    const restore = () => document.getElementById('myForm').reset; //Restaurando los valores con el metodo HTMLFormElement.reset
-
+    //Restaurando los valores con el metodo HTMLFormElement.reset
+    const restore = () => document.getElementById('myForm').reset;
+    //Pagina de mas informacion
 }
-
 start();

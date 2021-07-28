@@ -1,8 +1,9 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -10,20 +11,18 @@
 <body>
     <div id="root"></div>
 
-    <header class="header"><img class="banner" src="img/banner calidad optima.png" alt="bannertotoros">
-
-    </header>
-    <section>
+    <header class="header"><img class="banner" src="img/bannerStudio1000250(1).png" alt="bannertotoros"></header>
+    <section class="container">
         <div class="filter">
             <form id="myForm">
                 <label for="films">Order Films</label>
-                <select name="orderFilms" id="orderFilms">
+                <select data-field="title" name="orderFilms" id="orderFilms">
                 <option value="0">Order</option>
                 <option value="upward" id="orderUpward">Upward (A-Z)</option>
                 <option value="falling" id="orderFalling">Falling (Z-A)</option>
             </select>
                 <label for="date">Release Date</label>
-                <select name="orderDate" id="orderDate">
+                <select data-field="release_date" name="orderDate" id="orderDate">
                 <option value="0">Order</option>
                 <option value="upward" id="orderUpwardDate">Upward &#8593;</option>
                 <option value="falling" id="orderFallingDate">Falling &#8595;</option>
@@ -40,11 +39,7 @@
                 <button class="button" id="reset" onclick="restore()">Reset</button>
             </form>
         </div>
-    </section>
-    <section class="container">
         <div id="gridMovies" class="gridMovies"></div>
-
-        <output for="select"></output>
     </section>
     <footer class="footer">
         <p><img class="imgfooter" src="img/copyright-48.png">Copyright - Todos los derechos reservados - Creado por: Ana Karina Dávila - Nancy Díaz </p>
