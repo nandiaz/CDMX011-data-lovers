@@ -22,7 +22,7 @@ header {
 
 .banner {
     height: 250px;
-    width: 100;
+    width: 100%;
 }
 
 select {
@@ -57,6 +57,7 @@ label {
     flex-grow: 1;
     justify-content: center;
     margin-top: 30px;
+    gap: 30px;
 }
 
 .flip-card {
@@ -105,7 +106,7 @@ label {
 .filter {
     display: flex;
     justify-content: center;
-    font-size: 25px;
+    font-size: 18px;
     font-family: 'Muli', 'sans-serif';
 }
 
@@ -115,7 +116,7 @@ label {
     border-radius: 8px;
     color: #E6DDC6;
     width: 90px;
-    font-size: 20px;
+    font-size: 19px;
     font-family: 'Muli', 'sans-serif';
     font-weight: bold;
     margin-left: 20px;
@@ -145,9 +146,44 @@ label {
     height: 285px;
 }
 
-@media only screen and (max-width: 400px) {
-    .footer {
-        align-items: flex-start;
-        flex-direction: column;
+@media (max-width: 800px) {
+    form {
+        display: none;
     }
+    .btn--filter {
+        display: grid;
+    }
+    .btn--times {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 10px 12px;
+        border-radius: 50%;
+        border: 1px solid #dcdcdc;
+        color: #2B2B2B;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+}
+
+@media (min-width: 800px) {
+    .btn--filter,
+    .btn--times {
+        display: none;
+    }
+}
+
+form.form--showed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-items: center;
+    background: rgba(255, 255, 255, .9);
+    z-index: 10;
+    justify-content: center;
 }

@@ -48,6 +48,17 @@ const start = async() => {
 
     //Restaurando los valores con el metodo HTMLFormElement.reset
     const restore = () => document.getElementById('myForm').reset;
-    //Pagina de mas informacion
+
+    //parte movil
+    const btnFilter = document.querySelector('.btn--filter');
+    const btnTimes = document.querySelector('.btn--times');
+    const toggleForm = event => {
+        event.preventDefault();
+        const form = document.querySelector('#myForm');
+        form.classList.toggle('form--showed');
+    };
+    btnFilter.addEventListener('click', toggleForm);
+    btnTimes.addEventListener('click', toggleForm);
+
 }
 start();
