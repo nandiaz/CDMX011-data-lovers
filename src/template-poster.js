@@ -1,17 +1,17 @@
 export const templatePoster = manager => {
     return `
-  <div class = "flip-card">
+  <article class = "flip-card">
     <div class = "flip-card-inner">
-      <div class = "flip-card front">
+      <section class = "flip-card front">
         <picture>
         <img src= "${manager.poster}" alt= "${manager.title}" class= "imgfilm">
         </picture>
-      </div>
-      <div class = "flip-card-back">
-        <h1> ${manager.title} </h1>
-        <p> ${manager.description} </p>
-      </div>
+      </section>
+      <section class = "flip-card-back">
+        <h3> ${manager.title} </h3>
+        <p> ${manager.description.slice(0, 150)}... </p>
+      </section>
     </div>
-  </div>
+  </article>
         `;
 }

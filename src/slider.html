@@ -1,67 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
     <title>slider</title>
-    <link rel="stylesheet" href="styleslider.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <div class="main-container">
 
-    <div class="container">
-        <h1 class="titlefilms">Castle in the Sky </h1>
-        <ul class="slider">
-            <li id="slide1">
-                <img src="https://static.wikia.nocookie.net/studio-ghibli/images/8/8b/Pazu.jpg" />
-            </li>
-
-
-        </ul>
-
-        <ul class="menu">
-            <li>
-                <a href="#slide1">1</a>
-            </li>
-        </ul>
-        <p>Characters</p>
+        <header class="header"><img class="banner" src="img/bannerStudio1000250(1).png" alt="bannertotoros"></header>
+        <section class="container">
+            <div class="filter">
+                <label for="information">More information about the movies</label>
+                <select name="moreInformation" id="moreInformation">
+                <option value="0">search </option>
+                <option value="characters" id="characters">Characters</option>
+                <option value="Locations" id="Locations">Locations</option>
+                <option value="vehicles" id="vehicles">Vehicles</option>
+            </select>
+            </div>
+            <div id="gridMovies" class="grid-movies"></div>
+        </section>
     </div>
-    <div class="container">
-
-        <ul class="slider">
-            <li id="slide1">
-                <img src="https://static.wikia.nocookie.net/studio-ghibli/images/2/25/Thumbnail-8.jpeg" />
-            </li>
-
-        </ul>
-
-        <ul class="menu">
-            <li>
-                <a href="#slide1">1</a>
-            </li>
-        </ul>
-        <p>Locations</p>
-    </div>
-    <div class="container">
-
-        <ul class="slider">
-            <li id="slide1">
-                <img src="https://static.wikia.nocookie.net/studio-ghibli/images/e/e5/Goliath.png" />
-            </li>
-
-        </ul>
-
-        <ul class="menu">
-            <li>
-                <a href="#slide1">1</a>
-            </li>
-        </ul>
-        <p>Vehicles</p>
-    </div>
-
-
+    <footer class="footer">
+        <p><img class="img-footer" src="img/copyright-48.png">Copyright - Todos los derechos reservados - Creado por: Ana Karina Dávila - Nancy Díaz </p>
+    </footer>
+    <script src="main.js" type="module"></script>
 </body>
 
 </html>
