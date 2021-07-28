@@ -9,7 +9,7 @@ export const templatePoster = manager => {
       </section>
       <section class = "flip-card-back">
         <h3> ${manager.title} </h3>
-        <p> ${manager.description.slice(0, 150)}... </p>
+        <p> ${manager.description.slice(0, 150)}... <a id= "moreInformation" href="slider.html">Ver más</a> </p>
       </section>
     </div>
   </article>

@@ -110,6 +110,22 @@ label {
     font-family: 'Muli', 'sans-serif';
 }
 
+a:link {
+    color: #FFF5DA;
+}
+
+a:visited {
+    color: #C2B8A3;
+}
+
+a:active {
+    color: #C8C2BC;
+}
+
+a:hover {
+    color: #AAAAAA;
+}
+
 .button {
     background-color: #5D534A;
     border: none;

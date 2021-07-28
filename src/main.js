@@ -60,5 +60,9 @@ const start = async() => {
     btnFilter.addEventListener('click', toggleForm);
     btnTimes.addEventListener('click', toggleForm);
 
+    //pagina2
+
+
+
 }
 start();
