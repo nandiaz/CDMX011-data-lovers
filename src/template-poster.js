@@ -15,6 +15,7 @@ export const templatePoster = poster => {
         <h3> ${poster.title} </h3>
         <p> ${poster.description.slice(0, 150)}... <a  href="${URL}">Ver más</a> </p>
       </section>
+      
     </div>
   </article>       `;
 }
