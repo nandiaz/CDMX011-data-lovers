@@ -5,7 +5,7 @@ body {
 }
 
 .main-container {
-    position: grid;
+    display: grid;
     grid-template-rows: 1fr 100px;
 }
 
@@ -42,15 +42,16 @@ label {
     width: 100%;
 }
 
-#gridMovies.gridMovies {
+#grid-movies.grid-movies {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
 
-div {
+
+/* div {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-}
+} */
 
 .flip-card {
     padding: 10px;
