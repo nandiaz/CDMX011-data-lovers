@@ -47,11 +47,10 @@ label {
     grid-template-columns: repeat(5, 1fr);
 }
 
-
-/* div {
+.films__container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-} */
+}
 
 .flip-card {
     padding: 10px;
