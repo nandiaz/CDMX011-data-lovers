@@ -10,11 +10,22 @@ export const templatePoster = poster => {
         <picture>
         <img src= "${poster.poster}" alt= "${poster.title}" class= "imgfilm">
         </picture>
+<<<<<<< HEAD
       </section>
       <section class = "flip-card-back">
         <h3> ${poster.title} </h3>
         <p> ${poster.description.slice(0, 150)}... <a  href="${URL}">Ver más</a> </p>
       </section>
+=======
+      </div>
+      <div class = "flip-card-back">
+        <h1> ${manager.title} </h1>
+        <p> ${manager.description} </p>
+        <div class = "filterfilm">
+        <a href = "slider.html">Ver mas</a>
+        </div>
+      </div>
+>>>>>>> b4163d4 (primer intento para cambiar pagina 2)
       
     </div>
   </article>       `;
