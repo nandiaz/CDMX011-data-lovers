@@ -53,7 +53,6 @@ export const templatePosterPeople = id => {
 
     `;
 }
-<<<<<<< HEAD
 export const templatePosterLocations = id => {
     return `
     <article class='column item__data column__3'>
@@ -88,7 +87,4 @@ export const templatePosterVehicles = id => {
     </article>
   `;
 }
-=======
-
->>>>>>> 60b08e5 (probando 2a pagina)
 
