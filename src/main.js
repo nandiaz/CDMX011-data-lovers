@@ -61,17 +61,22 @@ const start = async() => {
     };
     btnFilter.addEventListener('click', toggleForm);
     btnTimes.addEventListener('click', toggleForm);
+    
+    //pasar a la segunda pagina
+    function filterFilmsSecond(id) {
 
 }
-start();
-// function FilterFilmsSecond() {
 
-//     film = document.getElementById("${manager.id}").value 
+start();
+
+// function FilterFilmsSecond(id) {
+
+//     alert(id);
     
     
 //     localStorage.setItem("Films", film);
   
-//   }
+  
 //   var film = localStorage.getItem("Films")
   
   
@@ -82,7 +87,3 @@ start();
 //   container2.appendChild(span)
 //   span.appendChild(contenido)
 //   document.body.container2.appendChild(container2)
-// function myFunction(event){
-//     var x = event.detail;
-//     document.getElementById 
-// }
