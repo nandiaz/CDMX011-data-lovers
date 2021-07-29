@@ -46,9 +46,17 @@ label {
     width: 100%;
 }
 
+
+/* Esto se centrará en cada uno de los elementos que sea hijo del #grid-movies div */
+
 #grid-movies.grid-movies {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-detail.grid-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .films__container {

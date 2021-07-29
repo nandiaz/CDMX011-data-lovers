@@ -16,6 +16,8 @@ export function DataManager() {
             this.producer = films.map((item) => item.producer).filter((item) => ![undefined].includes(item));
             this.producer = [...new Set(this.producer)];
             this.title = films.map((item) => item.title);
+            this.people = films.map((item) => item.people);
+            console.log('Personajes', this.people);
 
         }
         //Metodo para cargar la data.
@@ -28,14 +30,15 @@ export function DataManager() {
         }
         //Metodo filtrar por productor.
     this.filterByProducer = (producer) => {
-            if (!this.films) return []; //no se ha ejecutado el metodo load, no hay films para cargar.
-            return this.films.filter((item) => {
-                return item.producer === producer;
-            });
-        }
-        //ordena la lista de datos de manera ascendente o descendente, segun el campo pasado.
-        //option define si el ordenamiento es ascendente o descendente
-        //field nombre del campo en la data para ordenar, en nuestro caso title o release_data.
+        if (!this.films) return []; //no se ha ejecutado el metodo load, no hay films para cargar.
+        return this.films.filter((item) => {
+            return item.producer === producer;
+        });
+    }
+
+    //ordena la lista de datos de manera ascendente o descendente, segun el campo pasado.
+    //option define si el ordenamiento es ascendente o descendente
+    //field nombre del campo en la data para ordenar, en nuestro caso title o release_data.
     this.sortData = (option, field) => {
         let checkIsUp = (a, b) => a > b;
         let types = ['upward', 'falling'];
