@@ -16,6 +16,7 @@ export function DataManager() {
             this.producer = films.map((item) => item.producer).filter((item) => ![undefined].includes(item));
             this.producer = [...new Set(this.producer)];
             this.title = films.map((item) => item.title);
+
         }
         //Metodo para cargar la data.
     this.load = async() => { //funcion es asincrona
@@ -47,4 +48,8 @@ export function DataManager() {
             if (option === 'falling') return isUp ? -1 : 1;
         });
     };
+
+    this.getById = (id) => {
+        return this.films.find(item => item.id === id);
+    }
 }
