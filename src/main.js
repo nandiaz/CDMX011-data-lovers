@@ -65,9 +65,6 @@ const start = async() => {
     //pasar a la segunda pagina
 //     function filterFilmsSecond(id) {
 
-<<<<<<< HEAD
-}
-=======
 //         film= document.getElementById(id).value
          
          
@@ -85,7 +82,7 @@ const start = async() => {
 //        span.appendChild(contenido)
 //        document.body.container2.appendChild(container2)
 // }
->>>>>>> 60b08e5 (probando 2a pagina)
+}
 
 start();
 
