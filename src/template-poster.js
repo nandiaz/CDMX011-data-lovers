@@ -88,5 +88,3 @@ export const templatePosterVehicles = id => {
   `;
 }
 
-//     })
-// }
