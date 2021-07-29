@@ -13,15 +13,9 @@ body {
     display: grid;
     grid-template-rows: 1fr 100px;
 }
-<<<<<<< HEAD
 
 .main-container {}
 
-=======
-
-.main-container {}
-
->>>>>>> b4163d4 (primer intento para cambiar pagina 2)
 header {
     text-align: center;
 }
@@ -31,8 +25,6 @@ header {
     width: 1000px;
 }
 
-<<<<<<< HEAD
-=======
 filter {
     background: #5D534A;
     font-size: 18px;
@@ -44,4 +36,3 @@ filter {
     width: 210px;
     text-align: center;
 }
->>>>>>> b4163d4 (primer intento para cambiar pagina 2)
