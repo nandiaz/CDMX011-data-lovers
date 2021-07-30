@@ -1,27 +1,7 @@
 import { DataManager } from './data.js';
+import { templatePosterDetail } from './template-poster-detail'
 let manager = new DataManager; /// se instancia todo lo que esta adentro del DataManager, todos los this, aqui podre verlos.
 console.log('la clase en detail', manager);
-
-const templatePosterDetail = id => {
-
-    return `
-  <article>
-  <div>
-  <picture>
-        <img src= "${id.img}" alt= "${id.name}" class= "imgfilm">
-  </picture>
-    </div>
-    <div> 
-        <p> ${id.name}</p>
-        <p> ${id.age}</p>
-        <p> ${id.gender}</p>
-        <p> ${id.eye_color}</p>
-        <p>${id.hair_color}</p>
-        <p>${id.specie}</p>
-    </div>
-  </article>
-        `;
-}
 
 const start = async() => {
     await manager.load();
@@ -38,13 +18,14 @@ const start = async() => {
     //const selectLocations = document.querySelector('#locations');
     //const selectVehicles = document.querySelector('#vehicles');
     const gridDetail = document.getElementById('gridDetail');
+    //mostrando poster y descripcion
     let outputPoster = [];
     const div = document.createElement('div');
     div.innerHTML = outputPoster;
     gridDetail.appendChild(div);
 
     selectCharacters.addEventListener('change', event => {
-        console.log('hola');
+        console.log('hola', selectCharacters);
         let optionCharacters = selectCharacters.value;
         console.log('option personajes', optionCharacters);
         let filterCharacters = manager.filterByCharacter(optionCharacters);
@@ -58,3 +39,10 @@ const start = async() => {
 }
 
 start();
+
+// let outputPoster = [];
+// const div = document.createElement('div'); //createElement() crea un elemento HTML especificado por su tagName.
+// manager.films.forEach((items) => outputPoster += templatePoster(items)); //forEach recorre los elementos del arreglo films.
+// div.innerHTML = outputPoster;
+// div.classList.add('films__container')
+// gridMovies.appendChild(div);
