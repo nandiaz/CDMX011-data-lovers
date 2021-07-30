@@ -35,6 +35,12 @@ export function DataManager() {
             return item.producer === producer;
         });
     }
+    this.filterByCharacter = (option) => {
+        console.log('Select Characters', option);
+        return this.films.filter((item) => {
+            return item.people;
+        });
+    }
 
     //ordena la lista de datos de manera ascendente o descendente, segun el campo pasado.
     //option define si el ordenamiento es ascendente o descendente
@@ -53,6 +59,21 @@ export function DataManager() {
     };
 
     this.getById = (id) => {
+
         return this.films.find(item => item.id === id);
     }
 }
+
+
+// this.filterData = (option, field) => {
+
+//     let options = ['characters', 'locations', vehicles];
+//     if (!options.includes(option)) return new Error('la opcion no existe');
+//     return this.films.filter((film) => {
+//         console.log(2, field, 3, filmA[field], 4, filmB[field], 5, filmA);
+//         if (filmA[field] === filmB[field]) return 0; //aqui comparo los campos
+//         let isUp = checkIsUp(filmA[field], filmB[field]);
+//         if (option === 'upward') return isUp ? 1 : -1;
+//         if (option === 'falling') return isUp ? -1 : 1;
+//     });
+// };
