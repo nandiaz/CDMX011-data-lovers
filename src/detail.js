@@ -1,5 +1,5 @@
 import { DataManager } from './data.js';
-import { templatePosterDetail } from './template-poster-detail'
+import { templatePosterDetail } from './template-poster-detail.js'
 let manager = new DataManager; /// se instancia todo lo que esta adentro del DataManager, todos los this, aqui podre verlos.
 console.log('la clase en detail', manager);
 
@@ -14,7 +14,8 @@ const start = async() => {
     let film = manager.getById(id); //obtengo los datos del objeto que tiene ese id
     console.log(1, film);
 
-    const selectCharacters = document.getElementById('characters');
+    const selectCharacters = document.getElementById('moreInformation');
+    console.log('que tipo es selectCharacters', selectCharacters);
     //const selectLocations = document.querySelector('#locations');
     //const selectVehicles = document.querySelector('#vehicles');
     const gridDetail = document.getElementById('gridDetail');
