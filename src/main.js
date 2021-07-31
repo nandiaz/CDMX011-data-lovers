@@ -1,7 +1,7 @@
 import { DataManager } from './data.js';
 import { templatePoster } from './template-poster.js'
 let manager = new DataManager; /// se instancia todo lo que esta adentro del DataManager, todos los this, aqui podre verlos.
-console.log('la clase', manager);
+console.log('DataManager instanciado', manager);
 
 const createOpcion = (value, text) => {
         const option = document.createElement('option');
@@ -14,7 +14,7 @@ const selectProducer = document.querySelector('#selectProducer');
 const gridMovies = document.querySelector('#gridMovies');
 //const orderDate = document.querySelector('#orderDate');
 //const orderFilms = document.querySelector('#orderFilms');
-const reset = document.querySelector('#reset')
+//const reset = document.querySelector('#reset')
 const start = async() => {
     await manager.load();
     //Mostrando los poster
@@ -35,10 +35,11 @@ const start = async() => {
         div.innerHTML = listByProducer;
     });
     const mySelects = (select) => {
-        select.addEventListener('change', event => {
+        select.addEventListener('change', () => {
             let field = select.dataset.field;
             let option = select.value;
             let data = manager.sortData(option, field);
+
             let listByOrder = '';
             data.forEach((item) => listByOrder += templatePoster(item));
             div.innerHTML = listByOrder;
@@ -48,7 +49,7 @@ const start = async() => {
 
     //Restaurando los valores con el metodo HTMLFormElement.reset
     const restore = () => document.getElementById('myForm').reset;
-
+    console.log(restore);
     //parte movil
     const btnFilter = document.querySelector('.btn--filter');
     const btnTimes = document.querySelector('.btn--times');
@@ -59,9 +60,6 @@ const start = async() => {
     };
     btnFilter.addEventListener('click', toggleForm);
     btnTimes.addEventListener('click', toggleForm);
-
-
-
 
 }
 start();

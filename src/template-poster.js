@@ -18,3 +18,28 @@ export const templatePoster = poster => {
   </article>
         `;
 }
+
+export const templatePosterDetail = id => {
+    return `
+<div class='some-page-wrapper'>
+    <div class='row'>
+        <div class='column'>
+            <div class='blue-column'>
+                <h3 class="title-detail">${id.title}</h3>
+                <p>${id.description}</p>
+            </div>
+        </div>
+        <div class='column'>
+            <div class='green-column'>
+                <picture>
+                    <img src="${id.poster}" alt="${id.title}" class="imgDetail">
+                </picture>
+             
+            </div>
+       
+        </div>
+    </div>
+</div>
+
+      `;
+}

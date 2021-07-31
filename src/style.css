@@ -54,10 +54,11 @@ label {
     grid-template-columns: repeat(5, 1fr);
 }
 
-.grid-detail.grid-detail {
+
+/* #detail-information.detail-information {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-}
+} */
 
 .films__container {
     display: flex;
@@ -123,7 +124,7 @@ a:link {
 }
 
 a:visited {
-    color: #C2B8A3;
+    color: #2B2B2B;
 }
 
 a:active {
@@ -152,6 +153,12 @@ a:hover {
     height: 300px;
 }
 
+.imgDetail {
+    box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
+    width: 60%;
+    height: 400px;
+}
+
 .footer {
     display: flex;
     justify-content: center;
@@ -169,6 +176,59 @@ a:hover {
     width: 200px;
     height: 285px;
 }
+
+
+/* Estilo de detail titulo, descrpcion y poster */
+
+.some-page-wrapper {
+    margin: 15px;
+    margin-left: 10%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.double-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 2;
+}
+
+.blue-column {
+    height: 500px;
+    width: 80%;
+    color: #2B2B2B;
+    font-family: 'Londrina Solid', cursive;
+    line-height: 1.5em;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.title-detail {
+    font-size: 25px;
+    text-align: justify;
+    color: #2B2B2B;
+    font-family: 'Londrina Solid', cursive;
+}
+
+.green-column {
+    height: 100px;
+}
+
+
+/* Terminando estilos de detail page */
 
 @media (max-width: 800px) {
     form {

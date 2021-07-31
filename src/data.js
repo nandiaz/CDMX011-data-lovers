@@ -1,23 +1,28 @@
+/* eslint-disable no-undef */
 // Toda la data es un objeto
 // - studio::: propiedad de tipo string
 // - films: propiedad de tipo Array donde cada item es un objeto en si mismo
-// - films[0] objetos de tipo string exceptuando peaople, locations y vehicles"  que son arreglos.
+// - films[0] objetos de tipo string exceptuando people, locations y vehicles"  que son arreglos.
 //Objeto Data con un metodo Get
 //La ventaja de los objetos es que como tienen identidad, pueden encargarse de mas cosas dentro de el mismo
 export function DataManager() {
     //Ready sera true cuando ya tienes la data disponible y data contiene la "data"
     this.data = undefined; //
     this.ready = false;
+
     const process = () => {
+
             const { films } = this.data; //destructuro el films para no llamarlo siempre data.films.forEach
             this.films = films;
+            console.log('tipo de dato de films', typeof(this.films));
+
             this.years = films.map((item) => item.release_date).filter((item) => ![undefined].includes(item));
             this.years = [...new Set(this.years)]; //Un valor en un Set sólo puede estar una vez, el operador de descanso: ... lo que hace es recorrer los elementos de un objeto iterable y devolverlos separados por coma.
             this.producer = films.map((item) => item.producer).filter((item) => ![undefined].includes(item));
             this.producer = [...new Set(this.producer)];
             this.title = films.map((item) => item.title);
             this.people = films.map((item) => item.people);
-            console.log('Personajes', this.people);
+            console.log('Personajes', typeof(this.people));
 
         }
         //Metodo para cargar la data.
@@ -30,6 +35,7 @@ export function DataManager() {
         }
         //Metodo filtrar por productor.
     this.filterByProducer = (producer) => {
+        console.log('tipo de dato filterby', typeof(this.filterByProducer));
         if (!this.films) return []; //no se ha ejecutado el metodo load, no hay films para cargar.
         return this.films.filter((item) => {
             return item.producer === producer;
@@ -57,10 +63,13 @@ export function DataManager() {
             if (option === 'falling') return isUp ? -1 : 1;
         });
     };
+    console.log('tipo de dato de sortdata', this.sortData);
 
     this.getById = (id) => {
+        let myFind = this.films.find(item => item.id === id);
+        console.log('que me trae', myFind);
+        return myFind;
 
-        return this.films.find(item => item.id === id);
     }
 }
 

@@ -1,5 +1,6 @@
 import { DataManager } from './data.js';
-import { templatePosterDetail } from './template-poster-detail.js'
+import { templatePosterDetail } from './template-poster.js'
+
 let manager = new DataManager; /// se instancia todo lo que esta adentro del DataManager, todos los this, aqui podre verlos.
 console.log('la clase en detail', manager);
 
@@ -12,38 +13,29 @@ const start = async() => {
         return;
     }
     let film = manager.getById(id); //obtengo los datos del objeto que tiene ese id
-    console.log(1, film);
+    console.log('miFilms', film);
+    let characters = film.people;
+    console.log('probando si entro a propiedad de people', characters);
 
-    const selectCharacters = document.getElementById('moreInformation');
-    console.log('que tipo es selectCharacters', selectCharacters);
-    //const selectLocations = document.querySelector('#locations');
-    //const selectVehicles = document.querySelector('#vehicles');
+    const { title, poster, description } = film;
+
     const gridDetail = document.getElementById('gridDetail');
+
     //mostrando poster y descripcion
     let outputPoster = [];
-    const div = document.createElement('div');
+    const div = document.createElement('div'); //createElement() crea un elemento HTML especificado por su tagName.
+    outputPoster += templatePosterDetail(film); //forEach recorre los elementos del arreglo films.
     div.innerHTML = outputPoster;
+    div.classList.add('films__container');
     gridDetail.appendChild(div);
 
-    selectCharacters.addEventListener('change', event => {
-        console.log('hola', selectCharacters);
-        let optionCharacters = selectCharacters.value;
-        console.log('option personajes', optionCharacters);
-        let filterCharacters = manager.filterByCharacter(optionCharacters);
-        let listByCharacters = '';
-        filterCharacters.forEach((item) => listByCharacters += templatePosterDetail(item));
-        div.innerHTML = listByCharacters;
-    });
+    // const selectMoreOption = document.getElementById('moreInformation');
+    // selectMoreOption.addEventListener('change', () => {
+    //     let selectOption = selectMoreOption.value;
+    //     console.log('option personajes', selectOption);
 
-
+    // });
 
 }
 
 start();
-
-// let outputPoster = [];
-// const div = document.createElement('div'); //createElement() crea un elemento HTML especificado por su tagName.
-// manager.films.forEach((items) => outputPoster += templatePoster(items)); //forEach recorre los elementos del arreglo films.
-// div.innerHTML = outputPoster;
-// div.classList.add('films__container')
-// gridMovies.appendChild(div);
