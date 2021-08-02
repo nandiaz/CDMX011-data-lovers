@@ -82,7 +82,7 @@ Para: Saber conocer sus caracteristicas.
 
 Sketches.
 Primera Iteración.<br> Opciones:<br>
-<img class= "imgreadme" src="src/img/prototypeNAn.jpeg"><br>>
+<img class= "imgreadme" src="src/img/prototypeNAn.jpeg"><br>
 <img class= "imgreadme" src="src/img/prototipe2v1.jpeg"><br>
 Segunda Iteración.<br>
 <img class= "imgreadme" src="src/img/Prototipe3v2.jpeg"><br>
@@ -98,4 +98,4 @@ Opciones:<br>
 El diseño de la página, luego de solicitar varios feedback, nuestro resultado fue el siguiente:
 <img class= "imgreadme" src= "src/img/PrototipeFinalPrincipal.png"><br>
 <img class= "imgreadme" src= "src/img/prototipoFInaDetail.png"><br>
-<img class= "imgreadme" src= "src/img/prototipofinalPersonajes.png"><br>
+<img class= "imgreadme" src= "src/img/pantallaPersonajes.png"><br>
