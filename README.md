@@ -82,6 +82,7 @@ Para: Saber conocer sus caracteristicas.
 
 Sketches.
 Primera Iteración.<br> Opciones:<br>
+<img class= "imgreadme" src="src/img/prototypeNAn.jpeg"><br>>
 <img class= "imgreadme" src="src/img/prototipe2v1.jpeg"><br>
 Segunda Iteración.<br>
 <img class= "imgreadme" src="src/img/Prototipe3v2.jpeg"><br>
