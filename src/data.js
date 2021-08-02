@@ -18,12 +18,8 @@ export function DataManager() {
 
             this.years = films.map((item) => item.release_date).filter((item) => ![undefined].includes(item));
             this.years = [...new Set(this.years)]; //Un valor en un Set sólo puede estar una vez, el operador de descanso: ... lo que hace es recorrer los elementos de un objeto iterable y devolverlos separados por coma.
-            this.producer = films.map((item) => item.producer).filter((item) => ![undefined].includes(item));
+            this.producer = films.map((item) => item.producer);
             this.producer = [...new Set(this.producer)];
-            this.title = films.map((item) => item.title);
-            this.people = films.map((item) => item.people);
-            this.people = [...new Set(this.people)];
-            console.log('Personajes', typeof(this.people));
 
         }
         //Metodo para cargar la data.
@@ -36,7 +32,6 @@ export function DataManager() {
         }
         //Metodo filtrar por productor.
     this.filterByProducer = (producer) => {
-        if (!this.films) return []; //no se ha ejecutado el metodo load, no hay films para cargar.
         return this.films.filter((item) => {
             return item.producer === producer;
         });
@@ -53,7 +48,7 @@ export function DataManager() {
             console.log(2, field, 3, filmA[field], 4, filmB[field], 5, filmA);
             if (filmA[field] === filmB[field]) return 0; //aqui comparo los campos
             let isUp = checkIsUp(filmA[field], filmB[field]);
-            if (option === 'upward') return isUp ? 1 : -1;
+            if (option === 'upward') return isUp ? 1 : -1; //operadores ternarios variable = expresion ? true_value : false_value;
             if (option === 'falling') return isUp ? -1 : 1;
         });
     };
@@ -68,4 +63,17 @@ export function DataManager() {
 
     }
 }
-console.log('datamanager', typeof(DataManager));
+// console.log('datamanager', typeof(DataManager));
+
+
+// var ejemplo = [40, 2, 3, 6, 7, 84];
+// ejemplo.sort = function(a, b) {
+//     if (a < b) {
+//         return -1;
+//     }
+//     if (a > b) {
+//         return 1;
+//     }
+//     return 0;
+// }
+// console.log(ejemplo);

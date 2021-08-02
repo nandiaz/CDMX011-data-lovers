@@ -4,7 +4,7 @@ import { templatePoster } from './template-poster.js';
 import data from '/data/ghibli/ghibli.js';
 console.log('data js que trae', data);
 let films = data.films[2];
-console.log('que me tare data js en posicion2', films);
+console.log('que me trae data js en posicion2', films);
 
 //new se usa para indicarle al navegador que queremos crear una nueva instancia del objeto.
 let manager = new DataManager; /// se instancia todo lo que esta adentro del DataManager, todos los this, aqui podre verlos.
