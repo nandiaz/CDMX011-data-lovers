@@ -1,4 +1,4 @@
-// `http://localhost:5000/slider?id=${poster.id}`;
+// `http://localhost:5000/detail?id=${poster.id}`;
 
 export const templatePoster = poster => {
     //  const URL = `${location.origin}/detail?id=${poster.id}`;
