@@ -14,7 +14,7 @@ export function DataManager() {
 
             const { films } = this.data; //destructuro el films para no llamarlo siempre data.films.forEach
             this.films = films;
-            console.log('tipo de dato de films', typeof(this.films));
+            //console.log('tipo de dato de films', typeof(this.films));
 
             this.years = films.map((item) => item.release_date).filter((item) => ![undefined].includes(item));
             this.years = [...new Set(this.years)]; //Un valor en un Set sólo puede estar una vez, el operador de descanso: ... lo que hace es recorrer los elementos de un objeto iterable y devolverlos separados por coma.
@@ -45,20 +45,18 @@ export function DataManager() {
         let types = ['upward', 'falling'];
         if (!types.includes(option)) return new Error('El tipo no existe');
         return this.films.sort((filmA, filmB) => {
-            console.log(2, field, 3, filmA[field], 4, filmB[field], 5, filmA);
+            //console.log(2, field, 3, filmA[field], 4, filmB[field], 5, filmA);
             if (filmA[field] === filmB[field]) return 0; //aqui comparo los campos
             let isUp = checkIsUp(filmA[field], filmB[field]);
             if (option === 'upward') return isUp ? 1 : -1; //operadores ternarios variable = expresion ? true_value : false_value;
             if (option === 'falling') return isUp ? -1 : 1;
         });
     };
-    console.log('tipo de dato de sortdata', this.sortData);
 
     //Metodo encargado de pasar la data segun el id proporcionado.
 
     this.getById = (id) => {
         let myFind = this.films.find(item => item.id === id);
-        console.log('que me trae', myFind);
         return myFind;
 
     }
