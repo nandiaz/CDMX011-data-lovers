@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+
     <header class="header"><img class="banner" src="img/banner calidad optima.png" alt="bannertotoros"></header>
     <section>
         <div class="filter">
             <label for="information">More information about the movies</label>
-            <select name="moreInformation" id="moreInformation">
+            <select data-field= "filterFilmSecond"name="moreInformation" id="moreInformation">
                 <option value="0">search </option>
                 <option value="characters" id="characters">Characters</option>
                 <option value="locations" id="locations">Locations</option>
@@ -35,10 +35,12 @@
             <!-- <div id="gridMovies" class="gridMovies"></div> -->
             
         </div>
+            <div class="grid-detail" id="gridDetail">
+                
+            </div>
     </section>
-            <!-- <div id="gridMovies" class="grid-movies"></div> -->
-        </section>
-    </div>
+    
+        
     <footer class="footer">
         <p><img class="imgfooter" src="img/copyright-48.png">Copyright - Todos los derechos reservados - Creado por: Ana Karina Dávila - Nancy Díaz </p>
     </footer>
