@@ -4,6 +4,8 @@ import { templatePosterDetail, templatePosterLocations, templatePosterVehicles, 
 //new se usa para indicarle al navegador que queremos crear una nueva instancia del objeto
 let manager = new DataManager; /// se instancia todo lo que esta adentro del DataManager, todos los this, aqui podre verlos.
 //console.log('la clase en detail', manager);
+
+
 const start = async() => {
     await manager.load();
     let queryString = new URLSearchParams(location.search); // https://developer.mozilla.org/es/docs/Web/API/URLSearchParams
