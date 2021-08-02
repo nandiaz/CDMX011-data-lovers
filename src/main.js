@@ -1,5 +1,12 @@
+/* eslint-disable no-unused-vars */
 import { DataManager } from './data.js';
-import { templatePoster } from './template-poster.js'
+import { templatePoster } from './template-poster.js';
+import data from '/data/ghibli/ghibli.js';
+console.log('data js que trae', data);
+let films = data.films[2];
+console.log('que me tare data js en posicion2', films);
+
+//new se usa para indicarle al navegador que queremos crear una nueva instancia del objeto.
 let manager = new DataManager; /// se instancia todo lo que esta adentro del DataManager, todos los this, aqui podre verlos.
 console.log('DataManager instanciado', manager);
 
@@ -12,9 +19,6 @@ const createOpcion = (value, text) => {
     //constantes del DOM
 const selectProducer = document.querySelector('#selectProducer');
 const gridMovies = document.querySelector('#gridMovies');
-//const orderDate = document.querySelector('#orderDate');
-//const orderFilms = document.querySelector('#orderFilms');
-//const reset = document.querySelector('#reset')
 const start = async() => {
     await manager.load();
     //Mostrando los poster
@@ -49,7 +53,7 @@ const start = async() => {
 
     //Restaurando los valores con el metodo HTMLFormElement.reset
     const restore = () => document.getElementById('myForm').reset;
-    console.log(restore);
+
     //parte movil
     const btnFilter = document.querySelector('.btn--filter');
     const btnTimes = document.querySelector('.btn--times');

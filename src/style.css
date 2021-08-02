@@ -155,7 +155,13 @@ a:hover {
 
 .imgDetail {
     box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
-    width: 60%;
+    width: 70%;
+    height: 500px;
+}
+
+.imgDeta-option {
+    box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
+    width: 200px;
     height: 400px;
 }
 
@@ -197,6 +203,7 @@ a:hover {
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
+    justify-content: start;
 }
 
 .double-column {
@@ -207,13 +214,14 @@ a:hover {
 }
 
 .blue-column {
-    height: 500px;
+    height: 400px;
     width: 80%;
     color: #2B2B2B;
     font-family: 'Londrina Solid', cursive;
     line-height: 1.5em;
     font-size: 20px;
     text-align: justify;
+    margin: 20px;
 }
 
 .title-detail {
@@ -224,7 +232,8 @@ a:hover {
 }
 
 .green-column {
-    height: 100px;
+    height: 400px;
+    width: 80%;
 }
 
 

@@ -22,6 +22,7 @@ export function DataManager() {
             this.producer = [...new Set(this.producer)];
             this.title = films.map((item) => item.title);
             this.people = films.map((item) => item.people);
+            this.people = [...new Set(this.people)];
             console.log('Personajes', typeof(this.people));
 
         }
@@ -35,16 +36,9 @@ export function DataManager() {
         }
         //Metodo filtrar por productor.
     this.filterByProducer = (producer) => {
-        console.log('tipo de dato filterby', typeof(this.filterByProducer));
         if (!this.films) return []; //no se ha ejecutado el metodo load, no hay films para cargar.
         return this.films.filter((item) => {
             return item.producer === producer;
-        });
-    }
-    this.filterByCharacter = (option) => {
-        console.log('Select Characters', option);
-        return this.films.filter((item) => {
-            return item.people;
         });
     }
 
@@ -65,6 +59,8 @@ export function DataManager() {
     };
     console.log('tipo de dato de sortdata', this.sortData);
 
+    //Metodo encargado de pasar la data segun el id proporcionado.
+
     this.getById = (id) => {
         let myFind = this.films.find(item => item.id === id);
         console.log('que me trae', myFind);
@@ -72,17 +68,4 @@ export function DataManager() {
 
     }
 }
-
-
-// this.filterData = (option, field) => {
-
-//     let options = ['characters', 'locations', vehicles];
-//     if (!options.includes(option)) return new Error('la opcion no existe');
-//     return this.films.filter((film) => {
-//         console.log(2, field, 3, filmA[field], 4, filmB[field], 5, filmA);
-//         if (filmA[field] === filmB[field]) return 0; //aqui comparo los campos
-//         let isUp = checkIsUp(filmA[field], filmB[field]);
-//         if (option === 'upward') return isUp ? 1 : -1;
-//         if (option === 'falling') return isUp ? -1 : 1;
-//     });
-// };
+console.log('datamanager', typeof(DataManager));
