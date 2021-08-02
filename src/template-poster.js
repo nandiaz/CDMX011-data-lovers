@@ -63,7 +63,7 @@ export const templatePosterLocations = id => {
           <li><h5>Terrain</h5> <span>${id.terrain}</span></li>
           <li><h5>Surface Water</h5> <span>${id.surface_water}</span></li>     
         </ul>
-        </section>
+      </section>
         <picture>
           <img src="${id.img}" alt="${id.name}" class="imgDeta-option">
         </picture>
