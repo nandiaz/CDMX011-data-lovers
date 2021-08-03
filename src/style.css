@@ -80,13 +80,15 @@ label {
     position: relative;
     transition: 2.00s;
     transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -98,7 +100,6 @@ label {
     margin: 50px;
     width: 100%;
     height: 100%;
-    
 }
 
 .flip-card-back {
@@ -124,19 +125,21 @@ label {
 
 a:link {
     color: #FFF5DA;
+    font-size: 20px;
 }
 
 a:visited {
-    color: #2B2B2B;
-}
-
-a:active {
-    color: #C8C2BC;
+    color: #c05711;
 }
 
 a:hover {
-    color: #AAAAAA;
+    color: #a7973f;
 }
+
+a:active {
+    color: #b33f1c;
+}
+
 
 .button {
     background-color: #5D534A;
@@ -283,7 +286,7 @@ a:hover {
 }
 
 
-/* Terminando estilos de detail page */
+/* Terminando estilos de detail page  */
 
 @media (max-width: 800px) {
     form {
@@ -302,14 +305,14 @@ a:hover {
         color: #2B2B2B;
         font-size: 16px;
     }
-}
-
+} 
+ 
 @media (min-width: 800px) {
     .btn--filter,
     .btn--times {
         display: none;
     }
-}
+} 
 
 form.form--showed {
     position: fixed;
