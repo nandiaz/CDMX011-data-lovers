@@ -4,7 +4,6 @@ import { templatePosterDetail, templatePosterLocations, templatePosterVehicles, 
 //new se usa para indicarle al navegador que queremos crear una nueva instancia del objeto
 let manager = new DataManager; /// se instancia todo lo que esta adentro del DataManager, todos los this, aqui podre verlos.
 //console.log('la clase en detail', manager);
-
 const start = async() => {
     await manager.load();
     let queryString = new URLSearchParams(location.search); // https://developer.mozilla.org/es/docs/Web/API/URLSearchParams
@@ -13,13 +12,9 @@ const start = async() => {
         // console.log('404');
         return;
     }
+
     let film = manager.getById(id); //obtengo los datos del objeto que tiene ese id
-    // console.log('miFilms', film);
-    //let characters = film.people;
-    // console.log('probando si entro a propiedad de people', characters);
-
-    //const { title, poster, description } = film;
-
+    console.log('mi film', film);
     const gridDetail = document.getElementById('gridDetail');
 
     //mostrando poster y descripcion
@@ -29,40 +24,36 @@ const start = async() => {
     div.innerHTML = outputPoster;
     div.classList.add('films__container');
     gridDetail.appendChild(div);
-
     const selectMoreOption = document.getElementById('moreInformation');
     selectMoreOption.addEventListener('change', () => {
         let selectOption = selectMoreOption.value;
-        switch (selectOption) {
-            case 'characters':
-                let listByCharacters = "";
-                film.people.forEach(element => listByCharacters += templatePosterPeople(element));
-                div.innerHTML = listByCharacters;
-                break;
-            case 'locations':
-                let listBylocations = '';
-                film.locations.forEach(element => listBylocations += templatePosterLocations(element));
-                div.innerHTML = listBylocations;
-                if (templatePosterLocations == '') {
-                    div.innerHTML = "Contains no elements."
-                }
-                break;
-            case 'vehicles':
-                let listByVehicles = '';
-                film.vehicles.forEach(element => listByVehicles += templatePosterVehicles(element));
-                div.innerHTML = listByVehicles;
-                break;
-            default:
-                if (templatePosterLocations || templatePosterVehicles === '') {
-                    div.innerHTML = "Contains no elements."
-                }
-
-                break;
-
+        if (selectOption == 'characters') {
+            let listByCharacters = "";
+            film.people.forEach(element => listByCharacters += templatePosterPeople(element));
+            div.innerHTML = listByCharacters;
         }
+        if (selectOption == 'locations') {
+            console.log('que imprime location', film.locations);
 
+            let listBylocations = '';
+            film.locations.forEach(element => listBylocations += templatePosterLocations(element));
+            if (film.locations == 0) {
+                div.innerHTML = "Contains no elements."
+            } else {
+                div.innerHTML = listBylocations;
+            }
+        }
+        if (selectOption == 'vehicles') {
+            console.log('que imprime vehiculos', film.vehicles);
+            let listByVehicles = '';
+            film.vehicles.forEach(element => listByVehicles += templatePosterVehicles(element));
+            console.log('templatePosterVehicles', templatePosterVehicles)
+            if (film.vehicle === '') {
+                div.innerHTML = "Contains no elements."
+            } else {
+                div.innerHTML = listByVehicles;
+            }
+        }
     });
-
 }
-
 start();
