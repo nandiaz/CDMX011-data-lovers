@@ -1,13 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Ghibli - Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <h1>hola</h1>
+</head>
+
+<body>
+    <div class="main-container">
+
+        <header class="header"><img class="banner" src="img/bannerStudio1000250(1).png" alt="bannertotoros"></header>
+        <section class="container">
+            <div class="filter">
+                <button class="btn--filter"> Filtrar</button>
+                <form id="myForm">
+                    <button class="btn--times">x</button>
+                    <label>Order Films</label>
+                    <select data-field="title" name="orderFilms" id="orderFilms">
+                <option value="0">Order</option>
+                <option value="upward" id="orderUpward">Upward (A-Z)</option>
+                <option value="falling" id="orderFalling">Falling (Z-A)</option>
+            </select>
+                    <label>Release Date</label>
+                    <select data-field="release_date" name="orderDate" id="orderDate">
+                <option value="0">Order</option>
+                <option value="upward" id="orderUpwardDate">Upward &#8593;</option>
+                <option value="falling" id="orderFallingDate">Falling &#8595;</option>
+            </select>
+                    <label>Producer</label>
+                    <select name="selectProducer" id="selectProducer">
+                    <option value="0">Filter</option>
+            </select>
+                    <button class="button" id="reset" onclick="restore()">Reset</button>
+                </form>
+            </div>
+            <div id="gridMovies" class="grid-movies"></div>
+        </section>
+    </div>
+    <footer class="footer">
+        <p><img class="img-footer" src="img/copyright-48.png">Copyright - Todos los derechos reservados - Creado por: Ana Karina Dávila - Nancy Díaz </p>
+    </footer>
     <script src="main.js" type="module"></script>
-  </body>
+</body>
+
 </html>
