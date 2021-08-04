@@ -12,11 +12,9 @@ const start = async() => {
         // console.log('404');
         return;
     }
-
     let film = manager.getById(id); //obtengo los datos del objeto que tiene ese id
-    console.log('mi film', film);
-    const gridDetail = document.getElementById('gridDetail');
 
+    const gridDetail = document.getElementById('gridDetail');
     //mostrando poster y descripcion
     let outputPoster = [];
     const div = document.createElement('div'); //createElement() crea un elemento HTML especificado por su tagName.
@@ -33,25 +31,19 @@ const start = async() => {
             div.innerHTML = listByCharacters;
         }
         if (selectOption == 'locations') {
-            console.log('que imprime location', film.locations);
-
             let listBylocations = '';
             film.locations.forEach(element => listBylocations += templatePosterLocations(element));
-            if (film.locations == 0) {
+            div.innerHTML = listBylocations;
+            if (film.locations == '') {
                 div.innerHTML = "Contains no elements."
-            } else {
-                div.innerHTML = listBylocations;
             }
         }
         if (selectOption == 'vehicles') {
-            console.log('que imprime vehiculos', film.vehicles);
             let listByVehicles = '';
             film.vehicles.forEach(element => listByVehicles += templatePosterVehicles(element));
-            console.log('templatePosterVehicles', templatePosterVehicles)
-            if (film.vehicle === '') {
+            div.innerHTML = listByVehicles;
+            if (film.vehicles == '') {
                 div.innerHTML = "Contains no elements."
-            } else {
-                div.innerHTML = listByVehicles;
             }
         }
     });
