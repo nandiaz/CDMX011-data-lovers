@@ -35,7 +35,10 @@ const start = async() => {
             film.locations.forEach(element => listBylocations += templatePosterLocations(element));
             div.innerHTML = listBylocations;
             if (film.locations == '') {
-                div.innerHTML = "Contains no elements."
+                div.innerHTML = `<div class= 'grid-detail'>
+                                    <img clas= 'img-empty' src='img/ContainsnoElementsEmpty.png'>
+                                </div>`;
+
             }
         }
         if (selectOption == 'vehicles') {
@@ -43,7 +46,9 @@ const start = async() => {
             film.vehicles.forEach(element => listByVehicles += templatePosterVehicles(element));
             div.innerHTML = listByVehicles;
             if (film.vehicles == '') {
-                div.innerHTML = "Contains no elements."
+                div.innerHTML = `<div class= 'grid-detail'>
+                                      <img clas= 'img-empty' src='img/ContainsnoElementsEmpty.png'>
+                                 </div>`;
             }
         }
     });

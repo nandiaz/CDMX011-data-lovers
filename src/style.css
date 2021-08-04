@@ -147,6 +147,11 @@ a:hover {
     margin-left: 20px;
 }
 
+.img-empty {
+    height: 200px;
+    width: 200px;
+}
+
 .imgfilm {
     box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
     width: 100%;

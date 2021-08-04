@@ -40,7 +40,6 @@ export const templatePosterDetail = id => {
         </div>
     </div>
 </div>
-
       `;
 }
 export const templatePosterPeople = id => {
@@ -66,7 +65,6 @@ export const templatePosterPeople = id => {
       </div>
   </div>
 </div>
-
     `;
 }
 export const templatePosterLocations = id => {
@@ -90,7 +88,6 @@ export const templatePosterLocations = id => {
         </div>
     </div>
   </div>
-  
   `;
 }
 export const templatePosterVehicles = id => {
@@ -114,6 +111,5 @@ export const templatePosterVehicles = id => {
         </div>
     </div>
   </div>
-  
   `;
 }
