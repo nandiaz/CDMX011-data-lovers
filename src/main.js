@@ -1,26 +1,15 @@
-import { DataManager, } from './data.js';
+/* eslint-disable no-unused-vars */
+import { DataManager } from './data.js';
+import { templatePoster } from './template-poster.js';
+import data from '/data/ghibli/ghibli.js';
+//console.log('data js que trae', data);
+let films = data.films[2];
+//console.log('que me trae data js en posicion2', films);
+
+//new se usa para indicarle al navegador que queremos crear una nueva instancia del objeto.
 let manager = new DataManager; /// se instancia todo lo que esta adentro del DataManager, todos los this, aqui podre verlos.
-console.log('la clase', manager);
-console.log('que trae producer', manager.filterByProducer('Hayao Miyazaki'));
-console.log('que trae años', manager.filterByProducer(1988));
-console.log('que tare films', manager.sortDataFilms);
-const templatePoster = (manager) => {
-    return `
-    <div class = "flip-card">
-      <div class = "flip-card-inner">
-        <div class = "flip-card front">
-          <picture>
-          <img src= "${manager.poster}" alt= "${manager.title}" class= "imgfilm">
-          </picture>
-        </div>
-        <div class = "flip-card-back">
-          <h1> ${manager.title} </h1>
-          <p> ${manager.description} </p>
-        </div>
-      </div>
-    </div>
-          `;
-}
+//console.log('DataManager instanciado', manager);
+
 const createOpcion = (value, text) => {
         const option = document.createElement('option');
         option.value = value;
@@ -30,18 +19,14 @@ const createOpcion = (value, text) => {
     //constantes del DOM
 const selectProducer = document.querySelector('#selectProducer');
 const gridMovies = document.querySelector('#gridMovies');
-const orderDate = document.querySelector('#orderDate');
-const orderFilms = document.querySelector('#orderFilms');
-const reset = document.querySelector('#reset')
 const start = async() => {
     await manager.load();
-    console.log('el manager', manager);
     //Mostrando los poster
     let outputPoster = [];
-
     const div = document.createElement('div'); //createElement() crea un elemento HTML especificado por su tagName.
     manager.films.forEach((items) => outputPoster += templatePoster(items)); //forEach recorre los elementos del arreglo films.
     div.innerHTML = outputPoster;
+    div.classList.add('films__container')
     gridMovies.appendChild(div); //el metodo appendChild inserta un nuevo nodo dentro de la estructura DOM.
     //Llenando el select de producer 
     // manager.years.forEach(item => orderDate.add(createOpcion(item, item)));
@@ -52,31 +37,33 @@ const start = async() => {
         let listByProducer = '';
         filterProducer.forEach((item) => listByProducer += templatePoster(item));
         div.innerHTML = listByProducer;
-    })
-    orderDate.addEventListener('change', (event) => {
-        let optionReleaseDate = orderDate.value;
-        let data = manager.sortData(optionReleaseDate);
-        console.log('data', data);
-        let listByReleaseData = '';
-        console.log('soy listByReleaseData', listByReleaseData)
-        data.forEach((item) => listByReleaseData += templatePoster(item));
-        div.innerHTML = listByReleaseData;
-        console.log('soy listByReleaseData', listByReleaseData)
     });
-    orderFilms.addEventListener('change', (event) => {
-        let optionOrderFilms = orderFilms.value;
-        console.log('optionfilms', optionOrderFilms);
-        let data = manager.sortDataTitle(optionOrderFilms);
-        console.log('data', data);
-        let listByOrderFilms = '';
-        console.log('soy listByOrderFilms', listByOrderFilms)
-        data.forEach((item) => listByOrderFilms += templatePoster(item));
-        div.innerHTML = listByOrderFilms;
-        console.log('soy listByOrderFilms', listByOrderFilms)
-    });
+    const mySelects = (select) => {
+        select.addEventListener('change', () => {
+            let field = select.dataset.field;
+            let option = select.value;
+            let data = manager.sortData(option, field);
 
-    const restore = () => document.getElementById('myForm').reset; //Restaurando los valores con el metodo HTMLFormElement.reset
+            let listByOrder = '';
+            data.forEach((item) => listByOrder += templatePoster(item));
+            div.innerHTML = listByOrder;
+        })
+    }; // esto se ejecuta por cada select.
+    document.querySelectorAll(`[data-field]`).forEach(mySelects);
+
+    //Restaurando los valores con el metodo HTMLFormElement.reset
+    const restore = () => document.getElementById('myForm').reset;
+
+    //parte movil
+    const btnFilter = document.querySelector('.btn--filter');
+    const btnTimes = document.querySelector('.btn--times');
+    const toggleForm = event => {
+        event.preventDefault();
+        const form = document.querySelector('#myForm');
+        form.classList.toggle('form--showed');
+    };
+    btnFilter.addEventListener('click', toggleForm);
+    btnTimes.addEventListener('click', toggleForm);
 
 }
-
 start();

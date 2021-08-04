@@ -11,6 +11,7 @@
 * [7. Diseño de la Interfaz de Usuario.](#7-diseño-de-la-interfaz-de-usuario)
 * [8. Prototipo de baja fidelidad](#8-prototipo-de-baja-fidelidad)
 * [9. Prototipo de alta fidelidad](#9-prototipo-de-alta-fidelidad)
+* [10. Diseño final del proyecto](#10-diseño-final-del-proyecto)
 
 
 ***
@@ -48,18 +49,28 @@ Para informarse de todo lo que nos ha proporcionado el Estudio Ghibli, curiosida
 
  1. Historia de usuario 1: Filtrar las peliculas    
     Como: usuario online
-    Quiero: Filtrar las peliculas, así como también sus personajes, locaciones y vehículos de cada films
+    Quiero: Filtrar las peliculas, así como también sus personajes, locaciones y vehículos de cada films.
     Para:  Saber datos importantes sobre las peliculas de Studio Ghibli.
 * Criterios de aceptación:
-  1. El usuario debe seleccionar  el poster de la pelicula que desea conocer datos.
-  2. La interfaz debe verse bien en distintos dispositivos.
+  1. Poder filtrar por productores.
+  2. Poder ordenar por release data.
+  3. Poder ordenar de manera ascendente y descendente los titulos de las peliculas.
+  4. La pagina debe ser responsive.
 * Definicion de terminado:
   1. Pasar todas las pruebas.
   2. Debe estar actualizada en el repositorio.
 
- 2. Historia de usuario 2:
- 3. Historia de usuario 3: 
-
+2. Historia de usuario 2: Conocer información de los personajes, Vehiculos y locaciones de los films.
+Como: Fanatica de Studio Ghibli.
+Quiero: Poder seleccionar los personajes.
+Para: Saber conocer sus caracteristicas.
+* Criterios de aceptación:
+  1. El usuario debe seleccionar  el poster de la pelicula que desea conocer y visualizara el titulo y la descrpcion y a su vez un enlace a ver mas contenido.
+  2. El usuario podra filtrar por personajes, vehiculos y locaciones.
+  3. La pagina debe ser responsive.
+* Definicion de terminado:
+  1. Pasar todas las pruebas.
+  2. Debe estar actualizada en el repositorio.
 
 ## 7. Diseño de la Interfaz de Usuario.
 
@@ -70,18 +81,21 @@ Para informarse de todo lo que nos ha proporcionado el Estudio Ghibli, curiosida
 ## 8. Prototipo de baja fidelidad
 
 Sketches.
-Primera Iteración.<br>
-1. Opciones:<br>
-<img class= "imgreadme" src="src/img/prototipe1v1.jpeg">
+Primera Iteración.<br> Opciones:<br>
+<img class= "imgreadme" src="src/img/prototypeNAn.jpeg"><br>
 <img class= "imgreadme" src="src/img/prototipe2v1.jpeg"><br>
 Segunda Iteración.<br>
 <img class= "imgreadme" src="src/img/Prototipe3v2.jpeg"><br>
 
 ## 9. Prototipo de alta fidelidad
 Opciones:<br>
-<img src="src/img/amboslados prototypev2.png"><br>
+<img class= "imgreadme" src="src/img/amboslados prototypev2.png"><br>
 <img class= "imgreadme" src="src/img/prototype 1version2.png"><br>
 <img class= "imgreadme" src="src/img/prototype 2version2.png"><br>
 <img class= "imgreadme" src="src/img/prototype3version2.png"><br>
 
-## 10. Diseño final delproyecto:
+## 10. Diseño final del proyecto:
+El diseño de la página, luego de solicitar varios feedback, nuestro resultado fue el siguiente:
+<img class= "imgreadme" src= "src/img/PrototipeFinalPrincipal.png"><br>
+<img class= "imgreadme" src= "src/img/prototipoFInaDetail.png"><br>
+<img class= "imgreadme" src= "src/img/pantallaPersonajes.png"><br>
