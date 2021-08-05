@@ -20,7 +20,7 @@ export function DataManager() {
         }
         //Metodo para cargar la data.
     this.load = async() => { //funcion es asincrona
-            const response = await fetch('/data/ghibli/ghibli.json'); //El método fetch() es una peticion get o post a una url en nuestro caso es local.
+            const response = await fetch('https://akdavila2.github.io/CDMX011-data-lovers/data/ghibli/ghibli.json'); //El método fetch() es una peticion get o post a una url en nuestro caso es local.
             this.data = await response.json(); // respuesta de la funcion asincrona, por medio de la palabra await
             this.ready = true;
             process();

@@ -14,7 +14,10 @@ body {
     grid-template-rows: 1fr 100px;
 }
 
-.main-container {}
+.main-container {
+    height: 100%;
+    width: 100%;
+}
 
 header {
     text-align: center;
@@ -53,12 +56,6 @@ label {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
-
-
-/* #detail-information.detail-information {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-} */
 
 .films__container {
     display: flex;
@@ -174,7 +171,9 @@ a:hover {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 200px;
+    height: 100px;
+    position: sticky;
+    /*  position: sticky elemento tenga una posición fija */
 }
 
 .img-footer {
@@ -189,7 +188,7 @@ a:hover {
 }
 
 
-/* Estilo de detail titulo, descrpcion y poster */
+/* Estilo de detail titulo, descripcion y poster */
 
 .some-page-wrapper {
     margin: 15px;
@@ -218,7 +217,7 @@ a:hover {
     flex: 2;
 }
 
-.blue-column {
+.left-column {
     height: 400px;
     width: 80%;
     color: #2B2B2B;
@@ -236,7 +235,7 @@ a:hover {
     font-family: 'Londrina Solid', cursive;
 }
 
-.green-column {
+.right-column {
     height: 400px;
     width: 80%;
 }
