@@ -15,39 +15,35 @@ export const templatePoster = poster => {
         <p> ${poster.description.slice(0, 150)}... <a  href="${URL}">Ver más</a> </p>
       </section>
     </div>
-  </article>
-        `;
+  </article>       `;
 }
-
 export const templatePosterDetail = id => {
     return `
-<div class='some-page-wrapper'>
-    <div class='row'>
+<article class='some-page-wrapper'>
+    <section class='row'>
         <div class='column'>
-            <div class='blue-column'>
+            <div class='left-column'>
                 <h3 class="title-detail">${id.title}</h3>
                 <p>${id.description}</p>
             </div>
         </div>
-        <div class='column'>
-            <div class='green-column'>
+        <section class='column'>
+            <div class='right-column'>
                 <picture>
                     <img src="${id.poster}" alt="${id.title}" class="imgDetail">
                 </picture>
-             
             </div>
-       
-        </div>
-    </div>
-</div>
+        </section>
+    </section>
+</article>
       `;
 }
 export const templatePosterPeople = id => {
     return `
-<div class='some-page-wrapper'>
-  <div class='row'>
+<article class='some-page-wrapper'>
+  <section class='row'>
       <div class='column'>
-          <div class='blue-column'>
+          <div class='left-column'>
               <p>Name: ${id.name}</p>
               <p>Gender: ${id.gender}</p>
               <p>Age: ${id.age}</p>
@@ -56,60 +52,60 @@ export const templatePosterPeople = id => {
               <p>Specie: ${id.specie}</p>
           </div>
       </div>
-      <div class='column'>
-          <div class='green-column'>
+      <section class='column'>
+          <div class='right-column'>
               <picture>
                   <img src="${id.img}" alt="${id.name}" class="imgDeta-option">
               </picture>
           </div>    
-      </div>
-  </div>
-</div>
+      </section>
+  </section>
+</article>
     `;
 }
 export const templatePosterLocations = id => {
     return `
-    <div class='some-page-wrapper'>
-    <div class='row'>
-        <div class='column'>
-            <div class='blue-column'>
+    <article class='some-page-wrapper'>
+    <section class='row'>
+        <section class='column'>
+            <div class='left-column'>
                 <p>Name: ${id.name}</p>
                 <p>Climate: ${id.climate}</p>
                 <p>Terrain: ${id.terrain}</p>
                 <p>Surface Water: ${id.surface_water}</p>
             </div>
-        </div>
+        </section>
         <div class='column'>
-            <div class='green-column'>
+            <div class='right-column'>
                 <picture>
                     <img src="${id.img}" alt="${id.name}" class="imgDeta-option">
                 </picture>
             </div>    
         </div>
-    </div>
-  </div>
+    </section>
+  </article>
   `;
 }
 export const templatePosterVehicles = id => {
     return `
-    <div class='some-page-wrapper'>
-    <div class='row'>
+    <article class='some-page-wrapper'>
+    <section class='row'>
         <div class='column'>
-            <div class='blue-column'>
+            <div class='left-column'>
                 <p>Name: ${id.name}</p>
                 <p>Description: ${id.description}</p>
                 <p>Vehicle Class: ${id.vehicle_class}</p>
                 <p>Length: ${id.length}</p>
             </div>
         </div>
-        <div class='column'>
-            <div class='green-column'>
+        <section class='column'>
+            <div class='right-column'>
                 <picture>
                     <img src="${id.img}" alt="${id.name}" class="imgDeta-option">
                 </picture>
             </div>    
-        </div>
-    </div>
-  </div>
+        </section>
+    </section>
+  </article>
   `;
 }
