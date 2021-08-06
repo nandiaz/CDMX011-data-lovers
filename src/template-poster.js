@@ -1,7 +1,8 @@
 // `http://localhost:5000/slider?id=${poster.id}`;
 
 export const templatePoster = poster => {
-    const URL = `${location.origin}/detail?id=${poster.id}`;
+    //  const URL = `${location.origin}/detail?id=${poster.id}`;
+    const URL = `${location.origin}${location.pathname}detail?id=${poster.id}`;
     return `
   <article class = "flip-card">
     <div class = "flip-card-inner">

@@ -57,6 +57,11 @@ label {
     grid-template-columns: repeat(5, 1fr);
 }
 
+#grid-detail.grid-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .films__container {
     display: flex;
     flex-wrap: wrap;
