@@ -12,6 +12,7 @@ export function DataManager() {
     const process = () => {
             const { films } = this.data; //destructuro el films
             this.films = films;
+            console.log('mi data', this.films);
             this.title = films.map((item) => item.title);
             this.years = films.map((item) => item.release_date).filter((item) => ![undefined].includes(item));
             this.years = [...new Set(this.years)]; //Un valor en un Set sólo puede estar una vez, el operador de descanso: ... lo que hace es recorrer los elementos de un objeto iterable y devolverlos separados por coma.

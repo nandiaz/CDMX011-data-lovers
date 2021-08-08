@@ -23,18 +23,14 @@ export const templatePosterDetail = id => {
 <article class='some-page-wrapper'>
     <section class='row'>
         <div class='column'>
-            <div class='left-column'>
-                <h3 class="title-detail">${id.title}</h3>
-                <p>${id.description}</p>
-            </div>
+            <h3 class="title-detail">${id.title}</h3>
+            <p>${id.description}</p> 
         </div>
-        <section class='column'>
-            <div class='right-column'>
-                <picture>
-                    <img src="${id.poster}" alt="${id.title}" class="imgDetail">
-                </picture>
-            </div>
-        </section>
+        <div class='column'>
+            <picture>
+                <img src="${id.poster}" alt="${id.title}" class="imgDetail">
+            </picture>
+        </div>
     </section>
 </article>
       `;
@@ -42,71 +38,59 @@ export const templatePosterDetail = id => {
 export const templatePosterPeople = id => {
     return `
 <article class='some-page-wrapper'>
-  <section class='row'>
-      <div class='column'>
-          <div class='left-column'>
-              <p>Name: ${id.name}</p>
-              <p>Gender: ${id.gender}</p>
-              <p>Age: ${id.age}</p>
-              <p>Eye color: ${id.eye_color}</p>
-              <p>hair_color: ${id.hair_color}</p>
-              <p>Specie: ${id.specie}</p>
-          </div>
-      </div>
-      <section class='column'>
-          <div class='right-column'>
-              <picture>
-                  <img src="${id.img}" alt="${id.name}" class="imgDeta-option">
-              </picture>
-          </div>    
-      </section>
-  </section>
+    <section class='row'>
+        <div class='column'>
+            <p>Name: ${id.name}</p>
+            <p>Gender: ${id.gender}</p>
+            <p>Age: ${id.age}</p>
+            <p>Eye color: ${id.eye_color}</p>
+            <p>hair_color: ${id.hair_color}</p>
+            <p>Specie: ${id.specie}</p>
+        </div>
+        <div class='column'>
+            <picture>
+                <img src="${id.img}" alt="${id.name}" class="imgDeta-option">
+            </picture>
+        </div>    
+    </section>
 </article>
     `;
 }
 export const templatePosterLocations = id => {
     return `
-    <article class='some-page-wrapper'>
+<article class='some-page-wrapper'>
     <section class='row'>
-        <section class='column'>
-            <div class='left-column'>
-                <p>Name: ${id.name}</p>
-                <p>Climate: ${id.climate}</p>
-                <p>Terrain: ${id.terrain}</p>
-                <p>Surface Water: ${id.surface_water}</p>
-            </div>
-        </section>
         <div class='column'>
-            <div class='right-column'>
-                <picture>
-                    <img src="${id.img}" alt="${id.name}" class="imgDeta-option">
-                </picture>
-            </div>    
+            <p>Name: ${id.name}</p>
+            <p>Climate: ${id.climate}</p>
+            <p>Terrain: ${id.terrain}</p>
+            <p>Surface Water: ${id.surface_water}</p>
+        </div>
+        <div class='column'>
+            <picture>
+                <img src="${id.img}" alt="${id.name}" class="imgDeta-option">
+            </picture>
         </div>
     </section>
-  </article>
+</article>
   `;
 }
 export const templatePosterVehicles = id => {
     return `
-    <article class='some-page-wrapper'>
+<article class='some-page-wrapper'>
     <section class='row'>
-        <div class='column'>
-            <div class='left-column'>
-                <p>Name: ${id.name}</p>
-                <p>Description: ${id.description}</p>
-                <p>Vehicle Class: ${id.vehicle_class}</p>
-                <p>Length: ${id.length}</p>
-            </div>
+        <div class='column'> 
+            <p>Name: ${id.name}</p>
+            <p>Description: ${id.description}</p>
+            <p>Vehicle Class: ${id.vehicle_class}</p>
+            <p>Length: ${id.length}</p>    
         </div>
-        <section class='column'>
-            <div class='right-column'>
-                <picture>
-                    <img src="${id.img}" alt="${id.name}" class="imgDeta-option">
-                </picture>
-            </div>    
-        </section>
+        <div class='column'>
+            <picture>
+                <img src="${id.img}" alt="${id.name}" class="imgDeta-option">
+            </picture>
+        </div>    
     </section>
-  </article>
+</article>
   `;
 }

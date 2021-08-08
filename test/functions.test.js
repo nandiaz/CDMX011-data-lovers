@@ -43,8 +43,8 @@ describe('main function', function() {
             })
         }
         const title = films.map((item => item.title));
-        // console.log('titulos', title)
-        expect(sortData('upward', title)).toHaveLength(20);
+        console.log('titulos', title)
+        expect(sortData('upward', title)).toBe("Castle in the Sky");
 
     })
 
