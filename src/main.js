@@ -60,9 +60,7 @@ const start = async() => {
         form.classList.toggle('form--showed'); //como 'form--showed' no existe lo añade y devuelve true 
     };
     btnFilter.addEventListener('click', toggleForm);
-    btnTimes.addEventListener('click', toggleForm );
-    
-   
-}
+    btnTimes.addEventListener('click', toggleForm);
 
+}
 start();
