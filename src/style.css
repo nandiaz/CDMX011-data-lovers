@@ -162,13 +162,6 @@ a:hover {
     height: 300px;
 }
 
-.imgDetail {
-    box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
-    width: 250px;
-    height: 350px;
-    align-content: center;
-}
-
 .imgDeta-option {
     box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
     height: 100%;
@@ -224,6 +217,8 @@ a:hover {
     margin: auto;
     line-height: 1.5;
     font-family: 'Londrina Solid', cursive;
+    gap: 20px;
+    text-align: justify;
 }
 
 .title-detail {
@@ -231,6 +226,13 @@ a:hover {
     text-align: justify;
     color: #2B2B2B;
     font-family: 'Londrina Solid', cursive;
+}
+
+.imgDetail {
+    box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
+    width: 250px;
+    height: 350px;
+    align-content: center;
 }
 
 
@@ -253,6 +255,7 @@ a:hover {
     padding: 0;
     margin: 0;
     font-size: 1.5rem;
+    font-family: 'Londrina Solid', cursive;
 }
 
 .column.item__data .content,
