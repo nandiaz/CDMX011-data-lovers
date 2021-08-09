@@ -6,7 +6,7 @@
 //Objeto Data con un metodo Get
 //La ventaja de los objetos es que como tienen identidad, pueden encargarse de mas cosas dentro de el mismo
 export function DataManager() {
-    //Ready sera true cuando ya tienes la data disponible y data contiene la "data"
+    //Ready sera true cuando ya esta la data disponible y data contiene la "data"
     this.data = undefined; //
     this.ready = false;
     const process = () => {
@@ -20,9 +20,11 @@ export function DataManager() {
             this.producer = [...new Set(this.producer)];
         }
         //Metodo para cargar la data.
-    this.load = async() => { //funcion es asincrona
-            const response = await fetch('https://akdavila2.github.io/CDMX011-data-lovers/data/ghibli/ghibli.json'); //El método fetch() es una peticion get o post a una url en nuestro caso es local.
-            this.data = await response.json(); // respuesta de la funcion asincrona, por medio de la palabra await
+    this.load = async() => { //es una función asincrónica ya que está marcada con la async palabra clave.
+            const response = await fetch('https://akdavila2.github.io/CDMX011-data-lovers/data/ghibli/ghibli.json'); //La API Fetch hace peticiones HTTP (usando GET, POSTy otros métodos) 
+            //inicia una solicitud y devuelve una promesa. 
+            //Debido a que la await palabra clave está presente, la función asincrónica se detiene hasta que se completa la solicitud.  
+            this.data = await response.json(); // response.json()es un método en el objeto Response,devuelve una promesa, así que hay que esperar con await 
             this.ready = true;
             process();
             return this.ready;
