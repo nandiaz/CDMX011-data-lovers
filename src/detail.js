@@ -7,12 +7,12 @@ let manager = new DataManager; /// se instancia todo lo que esta adentro del Dat
 const start = async() => {
     await manager.load();
     let queryString = new URLSearchParams(location.search); // https://developer.mozilla.org/es/docs/Web/API/URLSearchParams
-    const id = queryString.get('id');
+    const id = queryString.get('id'); //https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams/get
     if (!id) {
         // console.log('404');
         return;
     }
-    let film = manager.getById(id); //obtengo los datos del objeto que tiene ese id
+    let film = manager.getById(id); //obtengo los datos del objeto que tiene ese id pasandole el metodo.getById
 
     const gridDetail = document.getElementById('gridDetail');
     //mostrando poster y descripcion
@@ -20,7 +20,7 @@ const start = async() => {
     const div = document.createElement('div'); //createElement() crea un elemento HTML especificado por su tagName.
     outputPoster += templatePosterDetail(film); //forEach recorre los elementos del arreglo films.
     div.innerHTML = outputPoster;
-    div.classList.add('films__container');
+    div.classList.add('films__details');
     gridDetail.appendChild(div);
     const selectMoreOption = document.getElementById('moreInformation');
     selectMoreOption.addEventListener('change', () => {
