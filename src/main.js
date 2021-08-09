@@ -44,6 +44,8 @@ const start = async() => {
             div.innerHTML = listByOrder;
         })
     }; // esto se ejecuta por cada select.
+    //data-field devuelve un objeto NodeList con la lista de objetos HTMLElement,
+    //Aunque NodeList no es un Array, es posible iterar sobre él utilizando forEach()
     document.querySelectorAll(`[data-field]`).forEach(mySelects);
 
     //Restaurando los valores con el metodo HTMLFormElement.reset

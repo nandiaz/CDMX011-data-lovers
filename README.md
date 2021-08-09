@@ -96,6 +96,6 @@ Opciones:<br>
 
 ## 10. Diseño final del proyecto:
 El diseño de la página, luego de solicitar varios feedback, nuestro resultado fue el siguiente:
-<img class= "imgreadme" src= "src/img/PrototipeFinalPrincipal.png"><br>
-<img class= "imgreadme" src= "src/img/prototipoFInaDetail.png"><br>
-<img class= "imgreadme" src= "src/img/pantallaPersonajes.png"><br>
+<img class= "imgreadme" src= "src/img/paginaprincipalPF.png"><br>
+<img class= "imgreadme" src= "src/img/PFpaginadetail.png"><br>
+<img class= "imgreadme" src= "src/img/paginapersonajes.png"><br>
