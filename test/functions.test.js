@@ -8,11 +8,6 @@ describe('main function', function() {
         let data = await response.json();
         //console.log('Cargando data', data);
         expect(data ? true : false).toBe(true);
-        // eslint-disable-next-line no-unused-vars
-        // let years = films.map((item => item.release_date).filter((item) => ![undefined].includes(item)));
-        // years = [...new Set(years)];
-        // console.log('muestra años', years)
-
     })
     test('should return the number of films por producer', async() => {
         const response = await fetch('https://akdavila2.github.io/CDMX011-data-lovers/data/ghibli/ghibli.json'); //El método fetch() es una peticion get o post a una url en nuestro caso es local.
@@ -26,26 +21,6 @@ describe('main function', function() {
         }
         expect(filterByProducer('Toru Hara')).toHaveLength(1);
         expect(filterByProducer('Hayao Miyazaki')).toHaveLength(2);
-    })
-    test('should return the titles in ascending and descending order', async() => {
-        const response = await fetch('https://akdavila2.github.io/CDMX011-data-lovers/data/ghibli/ghibli.json');
-        let data = await response.json();
-        const { films } = data;
-        const sortData = (option, field) => {
-            let checkIsUp = (a, b) => a > b;
-            let types = ['upward', 'falling'];
-            if (!types.includes(option)) return new Error('El tipo no existe');
-            return films.sort((filmA, filmB) => {
-                if (filmA[field] === filmB[field]) return 0; //aqui comparo los campos
-                let isUp = checkIsUp(filmA[field], filmB[field]);
-                if (option === 'upward') return isUp ? 1 : -1; //operadores ternarios variable = expresion ? true_value : false_value;
-                if (option === 'falling') return isUp ? -1 : 1;
-            })
-        }
-        const title = films.map((item => item.title));
-        console.log('titulos', title)
-        expect(sortData('upward', title)).toBe("Castle in the Sky");
-
     })
 
     test('Get should fail the test with invalid url', async() => {

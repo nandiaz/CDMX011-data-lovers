@@ -1,281 +1,328 @@
-                html {
-                    height: 100%;
-                    width: 100%;
-                }
-                
-                body {
-                    padding: 0px;
-                    background-image: url(img/paper-1074131_1920.jpg);
-                    margin: auto;
-                    max-width: 1280px;
-                    height: 100%;
-                    width: 100%;
-                    display: grid;
-                    grid-template-rows: 1fr 100px;
-                }
-                
-                .main-container {
-                    height: 100%;
-                    width: 100%;
-                }
-                
-                header {
-                    text-align: center;
-                }
-                
-                .banner {
-                    height: 250px;
-                    width: 100%;
-                }
-                
-                select {
-                    background: #5D534A;
-                    font-size: 18px;
-                    font-family: 'Muli', 'sans-serif';
-                    color: #E6DDC6;
-                    font-weight: bold;
-                    border-color: blanchedalmond;
-                    margin-right: 40px;
-                    width: 210px;
-                    text-align: center;
-                }
-                
-                label {
-                    margin-right: 20px;
-                }
-                
-                .container {
-                    margin: 0px;
-                    width: 100%;
-                }
-                /* Esto se centrará en cada uno de los elementos que sea hijo del #grid-movies div */
-                
-                #grid-movies.grid-movies {
-                    display: grid;
-                    grid-template-columns: repeat(5, 1fr);
-                }
-                
-                #grid-detail.grid-detail {
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr);
-                }
-                
-                .films__container,
-                .films__details {
-                    display: flex;
-                    flex-wrap: wrap;
-                    flex-grow: 1;
-                    justify-content: center;
-                    margin-top: 30px;
-                    gap: 30px;
-                }
-                
-                .flip-card {
-                    perspective: 1000px;
-                }
-                
-                .flip-card-inner {
-                    position: relative;
-                    transition: 2.00s;
-                    transform-style: preserve-3d;
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                }
-                
-                .flip-card:hover .flip-card-inner {
-                    transform: rotateY(180deg);
-                }
-                
-                .flip-card-front,
-                .flip-card-back {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    -webkit-backface-visibility: hidden;
-                    backface-visibility: hidden;
-                }
-                
-                .flip-card-front {
-                    margin: 50px;
-                    width: 100%;
-                    height: 100%;
-                }
-                
-                .flip-card-back {
-                    padding: 10px;
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    background-color: #5D534A;
-                    color: #FFF5DA;
-                    transform: rotateY(180deg);
-                    width: 200px;
-                    height: 300px;
-                }
-                
-                .filter {
-                    display: flex;
-                    justify-content: center;
-                    font-size: 18px;
-                    font-family: 'Muli', 'sans-serif';
-                }
-                
-                a:link {
-                    color: #FFF5DA;
-                }
-                
-                a:visited {
-                    color: #2B2B2B;
-                }
-                
-                a:active {
-                    color: #C8C2BC;
-                }
-                
-                a:hover {
-                    color: #AAAAAA;
-                }
-                
-                .button {
-                    background-color: #5D534A;
-                    border: none;
-                    border-radius: 8px;
-                    color: #E6DDC6;
-                    width: 90px;
-                    font-size: 19px;
-                    font-family: 'Muli', 'sans-serif';
-                    font-weight: bold;
-                    margin-left: 20px;
-                }
-                
-                .img-empty {
-                    height: 200px;
-                    width: 200px;
-                }
-                
-                .imgfilm {
-                    box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
-                    width: 100%;
-                    height: 300px;
-                }
-                
-                .imgDetail {
-                    box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
-                    width: 70%;
-                    height: 500px;
-                }
-                
-                .imgDeta-option {
-                    box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
-                    width: 200px;
-                    height: 400px;
-                }
-                
-                .footer {
-                    display: flex;
-                    justify-content: center;
-                    width: 100%;
-                    height: 100px;
-                    /* position: sticky;
-                    position: sticky elemento tenga una posición fija */
-                }
-                
-                .img-footer {
-                    width: 20px;
-                    height: 20px;
-                    padding: 10px;
-                }
-                
-                .imgreadme {
-                    width: 200px;
-                    height: 285px;
-                }
-                /* Estilo de detail titulo, descripcion y poster */
-                
-                .some-page-wrapper {
-                    display: flex;
-                    flex-grow: 1;
-                    overflow-x: hidden;
-                    width: 100%;
-                    height: 100%;
-                }
-                
-                .row {
-                    display: flex;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-                    width: 100%;
-                    height: 100%;
-                }
-                
-                .double-column {
-                    display: flex;
-                    flex-direction: column;
-                    flex-basis: 100%;
-                    flex: 2;
-                }
-                
-                .column {
-                    height: 100%;
-                    width: 100%;
-                    color: #2B2B2B;
-                    font-family: 'Londrina Solid', cursive;
-                    line-height: 1.5em;
-                    font-size: 20px;
-                    text-align: justify;
-                    margin: 20px;
-                    display: flex;
-                    flex-direction: column;
-                    flex-basis: 100%;
-                    flex: 1;
-                    justify-content: start;
-                }
-                
-                .title-detail {
-                    font-size: 25px;
-                    text-align: justify;
-                    color: #2B2B2B;
-                    font-family: 'Londrina Solid', cursive;
-                }
-                /* Terminando estilos de detail page */
-                
-                @media (max-width: 800px) {
-                    form {
-                        display: none;
-                    }
-                    .btn--filter {
-                        display: grid;
-                    }
-                    .btn--times {
-                        position: absolute;
-                        top: 15px;
-                        right: 15px;
-                        padding: 10px 12px;
-                        border-radius: 50%;
-                        border: 1px solid #dcdcdc;
-                        color: #2B2B2B;
-                        font-size: 16px;
-                    }
-                }
-                
-                @media (min-width: 800px) {
-                    .btn--filter,
-                    .btn--times {
-                        display: none;
-                    }
-                }
-                
-                form.form--showed {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    display: flex;
-                    flex-flow: column;
-                    align-items: center;
-                    justify-items: center;
-                    background: rgba(255, 255, 255, .9);
-                    z-index: 10;
-                    justify-content: center;
-                }
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding: 0px;
+    background-image: url(img/paper-1074131_1920.jpg);
+    margin: auto;
+    max-width: 1280px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 100px;
+}
+
+.main-container {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    text-align: center;
+}
+
+.banner {
+    height: 250px;
+    width: 100%;
+}
+
+select {
+    background: #5D534A;
+    font-size: 18px;
+    font-family: 'Londrina Solid', cursive;
+    color: #E6DDC6;
+    font-weight: bold;
+    border-color: blanchedalmond;
+    margin-right: 40px;
+    width: 210px;
+    text-align: center;
+}
+
+label {
+    margin-right: 20px;
+}
+
+.container {
+    margin: 0px;
+    width: 100%;
+}
+
+
+/* Esto se centrará en cada uno de los elementos que sea hijo del #grid-movies div */
+
+#grid-movies.grid-movies {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+#grid-detail.grid-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.films__container,
+.films__details {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    margin-top: 30px;
+    gap: 15px;
+    justify-content: center;
+}
+
+.flip-card {
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    transition: 2.00s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    margin: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card-back {
+    padding: 10px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #5D534A;
+    color: #FFF5DA;
+    transform: rotateY(180deg);
+    width: 200px;
+    height: 300px;
+    font-family: 'Londrina Solid', cursive;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-family: 'Londrina Solid', cursive;
+}
+
+a:link {
+    color: #FFF5DA;
+}
+
+a:visited {
+    color: #2B2B2B;
+}
+
+a:active {
+    color: #C8C2BC;
+}
+
+a:hover {
+    color: #AAAAAA;
+}
+
+.button {
+    background-color: #5D534A;
+    border: none;
+    border-radius: 8px;
+    color: #E6DDC6;
+    width: 90px;
+    font-size: 19px;
+    font-family: 'Londrina Solid', cursive;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.img-empty {
+    height: 200px;
+    width: 200px;
+}
+
+.imgfilm {
+    box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
+    width: 100%;
+    height: 300px;
+}
+
+.imgDetail {
+    box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
+    width: 250px;
+    height: 350px;
+    align-content: center;
+}
+
+.imgDeta-option {
+    box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+}
+
+.img-footer {
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+}
+
+.imgreadme {
+    width: 200px;
+    height: 285px;
+}
+
+
+/*estilo general para las columnas*/
+
+.column {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+
+/*division en tres para desktop, esto es sobreescrito en el media query*/
+
+.column.column__3 {
+    width: calc(33% - 15px);
+    max-width: calc(33% - 15px);
+    display: flex;
+    margin-top: 50px;
+    flex-grow: 1;
+}
+
+.column__2 {
+    width: calc(50% - 30px);
+    max-width: calc(50% - 30px);
+    display: flex;
+    margin-top: 50px;
+    flex-grow: 1;
+    margin: auto;
+    line-height: 1.5;
+    font-family: 'Londrina Solid', cursive;
+}
+
+.title-detail {
+    font-size: 25px;
+    text-align: justify;
+    color: #2B2B2B;
+    font-family: 'Londrina Solid', cursive;
+}
+
+
+/*estilo manejado para las columnas de la  pantalla de filter de detail */
+
+.column.item__data {}
+
+
+/*detalle del data*/
+
+.column .poster-detail__data {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    width: 100%;
+    text-align: end;
+}
+
+.column .poster-detail__data h5 {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.column.item__data .content,
+.column.item__data picture {
+    width: 50%;
+}
+
+@media (max-width: 600px) {
+    /*//agregamos un padding al contenedor principal para que se vea bien en mobile*/
+    .main-container .films__details {
+        padding: 30px;
+    }
+    .column,
+    .column.column__3 {
+        width: 100%;
+        max-width: 100%;
+    }
+    .column.item__data {
+        grid-template-columns: 1fr;
+    }
+    .column__2 {
+        display: flex;
+        margin-top: 50px;
+        flex-grow: 1;
+        justify-content: left;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* Terminando estilos de detail page */
+
+@media (max-width: 800px) {
+    form {
+        display: none;
+    }
+    .btn--filter {
+        display: grid;
+    }
+    .btn--times {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        padding: 10px 12px;
+        border-radius: 50%;
+        border: 1px solid #dcdcdc;
+        color: #2B2B2B;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 800px) {
+    .btn--filter,
+    .btn--times {
+        display: none;
+    }
+}
+
+form.form--showed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-items: center;
+    background: rgba(255, 255, 255, .9);
+    z-index: 10;
+    justify-content: center;
+}
