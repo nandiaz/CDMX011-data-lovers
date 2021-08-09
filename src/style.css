@@ -31,7 +31,7 @@ header {
 select {
     background: #5D534A;
     font-size: 18px;
-    font-family: 'Muli', 'sans-serif';
+    font-family: 'Londrina Solid', cursive;
     color: #E6DDC6;
     font-weight: bold;
     border-color: blanchedalmond;
@@ -57,13 +57,19 @@ label {
     grid-template-columns: repeat(5, 1fr);
 }
 
-.films__container {
+#grid-detail.grid-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.films__container,
+.films__details {
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
-    justify-content: center;
     margin-top: 30px;
-    gap: 30px;
+    gap: 15px;
+    justify-content: center;
 }
 
 .flip-card {
@@ -107,13 +113,14 @@ label {
     transform: rotateY(180deg);
     width: 200px;
     height: 300px;
+    font-family: 'Londrina Solid', cursive;
 }
 
 .filter {
     display: flex;
     justify-content: center;
     font-size: 18px;
-    font-family: 'Muli', 'sans-serif';
+    font-family: 'Londrina Solid', cursive;
 }
 
 a:link {
@@ -139,7 +146,7 @@ a:hover {
     color: #E6DDC6;
     width: 90px;
     font-size: 19px;
-    font-family: 'Muli', 'sans-serif';
+    font-family: 'Londrina Solid', cursive;
     font-weight: bold;
     margin-left: 20px;
 }
@@ -157,14 +164,16 @@ a:hover {
 
 .imgDetail {
     box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
-    width: 70%;
-    height: 500px;
+    width: 250px;
+    height: 350px;
+    align-content: center;
 }
 
 .imgDeta-option {
     box-shadow: 3px 3px 3px 3px #2B2B2B, 8px 8px 8px 8px #423F3E;
-    width: 200px;
-    height: 400px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .footer {
@@ -172,8 +181,6 @@ a:hover {
     justify-content: center;
     width: 100%;
     height: 100px;
-    position: sticky;
-    /*  position: sticky elemento tenga una posición fija */
 }
 
 .img-footer {
@@ -188,44 +195,35 @@ a:hover {
 }
 
 
-/* Estilo de detail titulo, descripcion y poster */
-
-.some-page-wrapper {
-    margin: 15px;
-    margin-left: 10%;
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-}
+/*estilo general para las columnas*/
 
 .column {
     display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-    justify-content: start;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: flex-start;
 }
 
-.double-column {
+
+/*division en tres para desktop, esto es sobreescrito en el media query*/
+
+.column.column__3 {
+    width: calc(33% - 15px);
+    max-width: calc(33% - 15px);
     display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 2;
+    margin-top: 50px;
+    flex-grow: 1;
 }
 
-.left-column {
-    height: 400px;
-    width: 80%;
-    color: #2B2B2B;
+.column__2 {
+    width: calc(50% - 30px);
+    max-width: calc(50% - 30px);
+    display: flex;
+    margin-top: 50px;
+    flex-grow: 1;
+    margin: auto;
+    line-height: 1.5;
     font-family: 'Londrina Solid', cursive;
-    line-height: 1.5em;
-    font-size: 20px;
-    text-align: justify;
-    margin: 20px;
 }
 
 .title-detail {
@@ -235,9 +233,54 @@ a:hover {
     font-family: 'Londrina Solid', cursive;
 }
 
-.right-column {
-    height: 400px;
-    width: 80%;
+
+/*estilo manejado para las columnas de la  pantalla de filter de detail */
+
+.column.item__data {}
+
+
+/*detalle del data*/
+
+.column .poster-detail__data {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    width: 100%;
+    text-align: end;
+}
+
+.column .poster-detail__data h5 {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.column.item__data .content,
+.column.item__data picture {
+    width: 50%;
+}
+
+@media (max-width: 600px) {
+    /*//agregamos un padding al contenedor principal para que se vea bien en mobile*/
+    .main-container .films__details {
+        padding: 30px;
+    }
+    .column,
+    .column.column__3 {
+        width: 100%;
+        max-width: 100%;
+    }
+    .column.item__data {
+        grid-template-columns: 1fr;
+    }
+    .column__2 {
+        display: flex;
+        margin-top: 50px;
+        flex-grow: 1;
+        justify-content: left;
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 
@@ -259,7 +302,6 @@ a:hover {
         border: 1px solid #dcdcdc;
         color: #2B2B2B;
         font-size: 16px;
-        text-transform: uppercase;
     }
 }
 
