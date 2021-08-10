@@ -2,16 +2,16 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
-
+* [1. Resumen del proyecto Studio Ghibli](#2-resumen-del-proyecto-Studio-Ghibli)
+* [2. ¿Quiénes son los principales usuarios de producto?](#2-quiénes-son-los-principales-usuarios-de-producto)
+* [3. ¿Cuáles son los objetivos de estos usuarios en relación con el producto?](#3-cuáles-son-los-objetivos-de-estos-usuarios-en-relación-con-el-producto)
+* [4. ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?](#4-cuáles-son-los-datos-más-relevantes-que-quieren-ver-en-la-interfaz-y-por-qué)
+* [5. ¿Cuándo utilizan o utilizarían el producto?](#5-cuándo-utilizan-o-utilizarían-el-producto)
+* [6. Historias de Usuario](#6-historia-de-usuario)
+* [7. Diseño de la Interfaz de Usuario.](#7-diseño-de-la-interfaz-de-usuario)
+* [8. Prototipo de baja fidelidad](#8-prototipo-de-baja-fidelidad)
+* [9. Prototipo de alta fidelidad](#9-prototipo-de-alta-fidelidad)
+* [10. Diseño final del proyecto](#10-diseño-final-del-proyecto)
 ***
 
 ## 1. Resumen del proyecto Studio Ghibli.
