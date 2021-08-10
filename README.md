@@ -12,8 +12,6 @@
 * [8. Prototipo de baja fidelidad](#8-prototipo-de-baja-fidelidad)
 * [9. Prototipo de alta fidelidad](#9-prototipo-de-alta-fidelidad)
 * [10. Diseño final del proyecto](#10-diseño-final-del-proyecto)
-
-
 ***
 
 ## 1. Resumen del proyecto Studio Ghibli.
