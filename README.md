@@ -53,10 +53,11 @@ Para informarse de todo lo que nos ha proporcionado el Estudio Ghibli, curiosida
   1. Poder filtrar por productores.
   2. Poder ordenar por release data.
   3. Poder ordenar de manera ascendente y descendente los titulos de las peliculas.
-  4. La pagina debe ser responsive.
+  
 * Definicion de terminado:
   1. Pasar todas las pruebas.
   2. Debe estar actualizada en el repositorio.
+  3. La pagina debe ser responsive.
 
 2. Historia de usuario 2: Conocer información de los personajes, Vehiculos y locaciones de los films.
 Como: Fanatica de Studio Ghibli.
@@ -65,10 +66,11 @@ Para: Saber conocer sus caracteristicas.
 * Criterios de aceptación:
   1. El usuario debe seleccionar  el poster de la pelicula que desea conocer y visualizara el titulo y la descrpcion y a su vez un enlace a ver mas contenido.
   2. El usuario podra filtrar por personajes, vehiculos y locaciones.
-  3. La pagina debe ser responsive.
+
 * Definicion de terminado:
   1. Pasar todas las pruebas.
   2. Debe estar actualizada en el repositorio.
+  3. La pagina debe ser responsive.
 
 ## 7. Diseño de la Interfaz de Usuario.
 
