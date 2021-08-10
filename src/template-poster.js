@@ -2,7 +2,7 @@
 
 export const templatePoster = poster => {
   //  const URL = `${location.origin}/detail?id=${poster.id}`;
-  const URL = `${location.origin}/detail?id=${poster.id}`;
+  const URL = `${location.origin}${location.pathname}detail?id=${poster.id}`;
   return `
 <article class = "flip-card">
   <div class = "flip-card-inner">
@@ -13,7 +13,7 @@ export const templatePoster = poster => {
     </section>
     <section class = "flip-card-back">
       <h3> ${poster.title} </h3>
-      <p> ${poster.description.slice(0, 150)}... <a  href="${URL}">Ver más</a> </p>
+      <p> ${poster.description.slice(0, 150)}... <a  href="${URL}">See more...</a> </p>
     </section>
   </div>
 </article>       `;
